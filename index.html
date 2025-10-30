@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Home Doctor – Practical Medicine Guide</title>
+<meta name="description" content="Be prepared when medical help is far away. Learn practical, doctor-approved solutions for emergencies, disasters, and everyday health issues." />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta property="og:title" content="The Home Doctor – Practical Medicine for Every Household">
+<meta property="og:description" content="Real-life, doctor-approved solutions for emergencies and everyday health issues.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://smagicmojo.github.io/mojo-coin/35830DF8-1963-4E91-88AF-BACF84091AA9.png">
+
+<style>
+  :root{
+    --bg:#0b1220; --panel:#0f1830; --card:#111b34; --muted:#a9b3c9; --text:#eef3ff;
+    --accent:#3B82F6; --accent2:#22c55e; --ring:rgba(59,130,246,.35); --radius:14px;
+    --shadow:0 16px 50px rgba(0,0,0,.35)
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 10% -10%,#20325f22,transparent),var(--bg);color:var(--text)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:1080px;margin:auto;padding:24px}
+  .shadow{box-shadow:var(--shadow)}
+  .btn{display:inline-block;padding:14px 18px;border-radius:12px;font-weight:800;letter-spacing:.2px}
+  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 10px 20px rgba(59,130,246,.35)}
+  .btn.primary:hover{transform:translateY(-1px)}
+  .btn.alt{background:var(--accent2);color:#001a0a;box-shadow:0 10px 20px rgba(34,197,94,.28)}
+  .muted{color:var(--muted)}
+  .card{background:var(--card);border:1px solid #1e2a46;border-radius:var(--radius)}
+  .badge{font-size:12px;padding:6px 10px;border:1px solid #29406e;border-radius:999px;background:#132145;color:#b8ccff}
+  .trust{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+  .pill{padding:8px 12px;border-radius:10px;background:#132145;border:1px solid #243355;color:#b7c8f0}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(6px);
+    background:linear-gradient(#0b1220ee,#0b1220dd);border-bottom:1px solid #1e2a46}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800}
+  .cta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+
+  /* Hero */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center;padding:24px 0}
+  .h1{font-weight:800;line-height:1.08;font-size:40px;margin:6px 0 10px}
+  .lead{color:var(--muted);margin:0 0 16px}
+  .shot{position:relative;overflow:hidden;border-radius:16px;border:1px solid #1e2a46;background:linear-gradient(135deg,#0e162b,#0e1422)}
+  .shot img{aspect-ratio:16/10;width:100%;object-fit:cover;opacity:.92}
+
+  /* Sections */
+  .section{padding:26px 0}
+  .grid{display:grid;gap:16px}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .cols-2{grid-template-columns:repeat(2,1fr)}
+  .benefit{padding:18px}
+  .benefit h3{margin:0 0 6px;font-size:18px}
+  .benefit p{margin:0;color:var(--muted)}
+
+  /* Email box */
+  .email-box{padding:22px}
+  .form{display:grid;gap:10px}
+  .input{width:100%;padding:14px 16px;border-radius:10px;border:1px solid #2a3b66;background:#0f1a33;color:#e9f0ff}
+  .submit{padding:14px 18px;border-radius:10px;background:var(--accent);color:#fff;font-weight:800;border:0;cursor:pointer}
+  .note{font-size:12px;color:#9fb5db;margin-top:8px}
+
+  /* Testimonials */
+  .quote{padding:18px;display:grid;gap:10px}
+  .stars{color:#ffda6a}
+
+  /* FAQ */
+  details{background:#0f1a33;border:1px solid #22345e;border-radius:12px;padding:14px}
+  details+details{margin-top:10px}
+  summary{font-weight:700;cursor:pointer}
+
+  /* Final bar (mobile sticky) */
+  .float-cta{position:fixed;left:0;right:0;bottom:0;background:#0d172f;border-top:1px solid #1e2a46;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 16px}
+  .hide-mobile{display:block}
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .h1{font-size:30px}
+    .cols-3,.cols-2{grid-template-columns:1fr}
+    .hide-mobile{display:none}
+  }
+  footer{color:#90a0bf;border-top:1px solid #1e2a46;margin-top:24px;padding:24px 0}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3B82F6"/><path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Home Doctor Guide</span>
+        <span class="badge">Trusted Resource</span>
+      </div>
+      <div class="cta-row hide-mobile">
+        <span class="pill">Deal ends in <b id="t-h">00</b>:<b id="t-m">00</b>:<b id="t-s">00</b></span>
+        <a class="btn primary" href="#" data-cta>Get the Book</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="badge">Doctor-inspired, household-ready</div>
+        <h1 class="h1">Be Prepared When Help Is Far Away</h1>
+        <p class="lead">
+          Learn practical, doctor-approved solutions for emergencies, disasters, and everyday health issues—so you can act fast and confidently at home.
+        </p>
+        <div class="trust">
+          <span class="pill">Easy to follow</span>
+          <span class="pill">Step-by-step methods</span>
+          <span class="pill">Household supplies list</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="#" data-cta>Get The Home Doctor</a>
+          <a class="btn alt" href="#" data-cta>Free Tips Newsletter</a>
+        </div>
+        
+      </div>
+      <div class="shot card shadow">
+        <img src="https://smagicmojo.github.io/mojo-coin/35830DF8-1963-4E91-88AF-BACF84091AA9.png" alt="Home Doctor Book">
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section">
+      <h2>What You’ll Learn</h2>
+      <div class="grid cols-3">
+        <div class="card benefit"><h3>Home Treatments</h3><p>Clear instructions for common issues when a clinic isn’t available.</p></div>
+        <div class="card benefit"><h3>Critical Symptoms</h3><p>Spot danger early and know when an issue can’t wait.</p></div>
+        <div class="card benefit"><h3>Essential Supplies</h3><p>Build a kit with affordable items you can keep at home.</p></div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="section">
+      <h2>Why Readers Recommend It</h2>
+      <div class="grid cols-3">
+        <figure class="card quote"><div class="stars">★★★★★</div><blockquote>“Simple, calm guidance I could follow during a power outage.”</blockquote><small class="muted">— Noura A.</small></figure>
+        <figure class="card quote"><div class="stars">★★★★★</div><blockquote>“Exactly the practical advice every home should keep on a shelf.”</blockquote><small class="muted">— Daniel P.</small></figure>
+        <figure class="card quote"><div class="stars">★★★★☆</div><blockquote>“Great checklists. Helped me make a proper first-aid kit.”</blockquote><small class="muted">— Priya S.</small></figure>
+      </div>
+    </section>
+
+    <!-- EMAIL CAPTURE -->
+    <section id="newsletter" class="section">
+      <h2>Free Health Tips + Emergency Checklists</h2>
+      <p class="muted">Join our weekly email with practical first-aid knowledge and at-home care guides.</p>
+      <div class="card email-box shadow">
+        <form id="lead-form" class="form" autocomplete="on">
+          <input class="input" type="email" name="email" id="email" placeholder="Enter your email" required>
+          <button class="submit" type="submit">Subscribe & Get Free Guide</button>
+          <div id="form-msg" class="note"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <h2>What’s Inside</h2>
+      <div class="grid cols-3">
+        <div class="card benefit"><h3>Step-by-Step Methods</h3><p>Follow clear instructions with checklists for quick action.</p></div>
+        <div class="card benefit"><h3>Everyday Remedies</h3><p>Use items most households already have on hand.</p></div>
+        <div class="card benefit"><h3>Emergency Readiness</h3><p>Prepare for grid-down, storms, or travel far from clinics.</p></div>
+      </div>
+      <p style="margin-top:16px"><a class="btn primary" href="#" data-cta>Get Your Copy</a></p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <h2>FAQ</h2>
+      <details><summary>Is it beginner-friendly?</summary><p class="muted">Yes. The book is written in simple language with illustrations and checklists.</p></details>
+      <details><summary>Does it replace doctors?</summary><p class="muted">No. It helps you act responsibly when expert help is delayed or unavailable.</p></details>
+      <details><summary>Is there a supplies list?</summary><p class="muted">Yes. You’ll find a practical kit list you can assemble at home.</p></details>
+    </section>
+  </main>
+
+  <!-- MOBILE FLOAT CTA -->
+  <div class="float-cta">
+    <div class="muted" style="font-weight:700">Ready to be prepared?</div>
+    <a class="btn primary" href="#" data-cta>Get The Home Doctor</a>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> Home Doctor – Affiliate Page</small><br>
+      <small class="muted">Medical disclaimer: This page is informational and not a substitute for professional care.</small>
+    </div>
+  </footer>
+
+<script>
+  // === SET THESE TWO VALUES ===
+  const AFF_URL = "https://homedoctorbook.com/book/#aff=salihxalu"; // your affiliate link
+  const FORM_POST_URL = "https://script.google.com/macros/s/REPLACE_WITH_YOUR_WEB_APP_ID/exec"; // Google Apps Script Web App
+
+  // Apply affiliate link to all CTAs
+  document.querySelectorAll('[data-cta]').forEach(el=>{
+    el.addEventListener('click', e=>{ e.preventDefault(); window.open(AFF_URL, '_blank'); });
+    el.setAttribute('href', AFF_URL);
+  });
+
+  // Simple deadline timer (12 hours, stored per device)
+  const HOURS=12, KEY='deal_deadline';
+  let deadline = localStorage.getItem(KEY) ? new Date(localStorage.getItem(KEY)) : new Date(Date.now()+HOURS*3600*1000);
+  if(!localStorage.getItem(KEY)) localStorage.setItem(KEY, deadline.toISOString());
+  function tick(){
+    const now=new Date(); let d=Math.max(0, deadline-now);
+    const h=String(Math.floor(d/3600000)).padStart(2,'0'); d%=3600000;
+    const m=String(Math.floor(d/60000)).padStart(2,'0'); d%=60000;
+    const s=String(Math.floor(d/1000)).padStart(2,'0');
+    document.getElementById('t-h').textContent=h;
+    document.getElementById('t-m').textContent=m;
+    document.getElementById('t-s').textContent=s;
+  }
+  tick(); setInterval(tick,1000);
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Email capture → Google Apps Script
+  const form = document.getElementById('lead-form');
+  const msg  = document.getElementById('form-msg');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    if(!email){ msg.textContent="Please enter a valid email."; return; }
+    msg.textContent="Submitting…";
+    try{
+      const res = await fetch(FORM_POST_URL, {
+        method:'POST',
+        headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams({email})
+      });
+      const text = await res.text();
+      if(text.includes("SUCCESS")) {
+        msg.textContent="You're in! Check your inbox for the guide.";
+        form.reset();
+        // Optional: redirect to affiliate after signup
+        setTimeout(()=>window.open(AFF_URL,'_blank'), 800);
+      } else {
+        msg.textContent="Something went wrong. Please try again.";
+      }
+    }catch(err){
+      msg.textContent="Network error. Please try again.";
+    }
+  });
+</script>
+</body>
+</html>
