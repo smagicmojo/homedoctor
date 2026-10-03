@@ -1,252 +1,1003 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>The Home Doctor – Practical Medicine Guide</title>
-<meta name="description" content="Be prepared when medical help is far away. Learn practical, doctor-approved solutions for emergencies, disasters, and everyday health issues." />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<meta property="og:title" content="The Home Doctor – Practical Medicine for Every Household">
-<meta property="og:description" content="Real-life, doctor-approved solutions for emergencies and everyday health issues.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://smagicmojo.github.io/mojo-coin/35830DF8-1963-4E91-88AF-BACF84091AA9.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCura Digital — Interactive Emergency & Self-Care Intelligence</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            cyan: '#06b6d4',
+                            glow: '#00f2fe',
+                            darkBg: '#080d1a',
+                            cardBg: 'rgba(15, 23, 42, 0.75)',
+                            border: 'rgba(255, 255, 255, 0.08)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 3s infinite ease-in-out',
+                        'float': 'float 6s infinite ease-in-out',
+                        'spin-slow': 'spin 12s linear infinite'
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.8', transform: 'scale(1.05)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-<style>
-  :root{
-    --bg:#0b1220; --panel:#0f1830; --card:#111b34; --muted:#a9b3c9; --text:#eef3ff;
-    --accent:#3B82F6; --accent2:#22c55e; --ring:rgba(59,130,246,.35); --radius:14px;
-    --shadow:0 16px 50px rgba(0,0,0,.35)
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;height:100%}
-  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 10% -10%,#20325f22,transparent),var(--bg);color:var(--text)}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #060b17;
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
 
-  .wrap{max-width:1080px;margin:auto;padding:24px}
-  .shadow{box-shadow:var(--shadow)}
-  .btn{display:inline-block;padding:14px 18px;border-radius:12px;font-weight:800;letter-spacing:.2px}
-  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 10px 20px rgba(59,130,246,.35)}
-  .btn.primary:hover{transform:translateY(-1px)}
-  .btn.alt{background:var(--accent2);color:#001a0a;box-shadow:0 10px 20px rgba(34,197,94,.28)}
-  .muted{color:var(--muted)}
-  .card{background:var(--card);border:1px solid #1e2a46;border-radius:var(--radius)}
-  .badge{font-size:12px;padding:6px 10px;border:1px solid #29406e;border-radius:999px;background:#132145;color:#b8ccff}
-  .trust{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-  .pill{padding:8px 12px;border-radius:10px;background:#132145;border:1px solid #243355;color:#b7c8f0}
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(13, 22, 41, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-  /* Header */
-  header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(6px);
-    background:linear-gradient(#0b1220ee,#0b1220dd);border-bottom:1px solid #1e2a46}
-  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:800}
-  .cta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+        .glass-panel-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-  /* Hero */
-  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center;padding:24px 0}
-  .h1{font-weight:800;line-height:1.08;font-size:40px;margin:6px 0 10px}
-  .lead{color:var(--muted);margin:0 0 16px}
-  .shot{position:relative;overflow:hidden;border-radius:16px;border:1px solid #1e2a46;background:linear-gradient(135deg,#0e162b,#0e1422)}
-  .shot img{aspect-ratio:16/10;width:100%;object-fit:cover;opacity:.92}
+        .glass-panel-hover:hover {
+            background: rgba(18, 30, 56, 0.85);
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.2);
+        }
 
-  /* Sections */
-  .section{padding:26px 0}
-  .grid{display:grid;gap:16px}
-  .cols-3{grid-template-columns:repeat(3,1fr)}
-  .cols-2{grid-template-columns:repeat(2,1fr)}
-  .benefit{padding:18px}
-  .benefit h3{margin:0 0 6px;font-size:18px}
-  .benefit p{margin:0;color:var(--muted)}
+        .glow-text {
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  /* Email box */
-  .email-box{padding:22px}
-  .form{display:grid;gap:10px}
-  .input{width:100%;padding:14px 16px;border-radius:10px;border:1px solid #2a3b66;background:#0f1a33;color:#e9f0ff}
-  .submit{padding:14px 18px;border-radius:10px;background:var(--accent);color:#fff;font-weight:800;border:0;cursor:pointer}
-  .note{font-size:12px;color:#9fb5db;margin-top:8px}
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(90deg, #10b981, #06b6d4);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        .glow-border:hover::after {
+            opacity: 0.8;
+        }
 
-  /* Testimonials */
-  .quote{padding:18px;display:grid;gap:10px}
-  .stars{color:#ffda6a}
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060b17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
 
-  /* FAQ */
-  details{background:#0f1a33;border:1px solid #22345e;border-radius:12px;padding:14px}
-  details+details{margin-top:10px}
-  summary{font-weight:700;cursor:pointer}
+        /* CPR Pulse visual animation */
+        @keyframes cprBeat {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            50% { transform: scale(1.08); box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
 
-  /* Final bar (mobile sticky) */
-  .float-cta{position:fixed;left:0;right:0;bottom:0;background:#0d172f;border-top:1px solid #1e2a46;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 16px}
-  .hide-mobile{display:block}
-  @media (max-width:900px){
-    .hero{grid-template-columns:1fr}
-    .h1{font-size:30px}
-    .cols-3,.cols-2{grid-template-columns:1fr}
-    .hide-mobile{display:none}
-  }
-  footer{color:#90a0bf;border-top:1px solid #1e2a46;margin-top:24px;padding:24px 0}
-</style>
+        .cpr-active {
+            animation: cprBeat 0.6s infinite;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="wrap bar">
-      <div class="logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3B82F6"/><path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>Home Doctor Guide</span>
-        <span class="badge">Trusted Resource</span>
-      </div>
-      <div class="cta-row hide-mobile">
-        <span class="pill">Deal ends in <b id="t-h">00</b>:<b id="t-m">00</b>:<b id="t-s">00</b></span>
-        <a class="btn primary" href="#" data-cta>Get the Book</a>
-      </div>
-    </div>
-  </header>
+<body class="relative min-h-screen selection:bg-emerald-500 selection:text-black">
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="badge">Doctor-inspired, household-ready</div>
-        <h1 class="h1">Be Prepared When Help Is Far Away</h1>
-        <p class="lead">
-          Learn practical, doctor-approved solutions for emergencies, disasters, and everyday health issues—so you can act fast and confidently at home.
-        </p>
-        <div class="trust">
-          <span class="pill">Easy to follow</span>
-          <span class="pill">Step-by-step methods</span>
-          <span class="pill">Household supplies list</span>
+    <canvas id="bg-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto glass-panel rounded-2xl px-5 py-3 flex items-center justify-between shadow-2xl">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-tight text-white flex items-center gap-1.5">
+                        HealthCura <span class="glow-text">Digital</span>
+                    </span>
+                    <span class="text-[10px] tracking-widest uppercase text-slate-400 block font-mono">Interactive Care Engine</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 font-medium text-sm text-slate-300">
+                <a href="#first-aid" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-kit-medical text-xs"></i> Emergency Guides</a>
+                <a href="#calculators" class="hover:text-cyan-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-calculator text-xs"></i> Health Calculators</a>
+                <a href="#checklist" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-xs"></i> Kit Readiness</a>
+                <a href="#pulse" class="hover:text-cyan-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-wifi text-xs"></i> Health Pulse</a>
+            </nav>
+
+            <!-- Quick Action & Emergency Trigger -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleCPRModal()" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-red-500/10 border border-red-500/30 text-red-400 hover:bg-red-500/20 transition-all flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                    CPR Metronome
+                </button>
+                <a href="tel:911" class="px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 hover:brightness-110 transition-all shadow-lg shadow-emerald-500/25">
+                    Emergency Call
+                </a>
+            </div>
         </div>
-        <div class="cta-row">
-          <a class="btn primary" href="#" data-cta>Get The Home Doctor</a>
-          <a class="btn alt" href="#" data-cta>Free Tips Newsletter</a>
+    </header>
+
+    <main class="relative z-10 pt-32 pb-20">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <!-- Status Pill -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-xs font-mono text-emerald-400 border-emerald-500/30 animate-float">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Medical Response Assistant Active • 2026 Edition
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Instant Clinical Intelligence <br/>
+                    <span class="glow-text">Every Second Counts.</span>
+                </h1>
+
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+                    Zero ads, non-affiliate, instant interactive first-aid guidance, precision health calculators, and verified emergency protocols at your fingertips.
+                </p>
+
+                <!-- Interactive Search Bar -->
+                <div class="relative max-w-2xl mx-auto mt-8">
+                    <div class="relative flex items-center">
+                        <i class="fa-solid fa-magnifying-glass absolute left-4 text-slate-400 text-lg"></i>
+                        <input type="text" id="searchInput" onkeyup="filterFirstAid()" placeholder="Search symptoms, first aid procedures (e.g. burns, CPR, heatstroke)..." 
+                            class="w-full pl-12 pr-28 py-4 bg-slate-900/80 border border-slate-700/60 rounded-2xl focus:outline-none focus:border-emerald-500 text-slate-100 placeholder-slate-500 text-sm glass-panel shadow-2xl transition-all">
+                        <button class="absolute right-3 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-xl transition-all">
+                            Filter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Emergency Quick Cards Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 text-left">
+                    <button onclick="openAidModal('cpr')" class="glass-panel p-3.5 rounded-xl border-red-500/20 hover:border-red-500/50 transition-all flex items-center gap-3 group">
+                        <div class="w-9 h-9 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div>
+                            <div class="text-xs font-bold text-white">CPR Steps</div>
+                            <div class="text-[10px] text-slate-400">Cardiac Arrest</div>
+                        </div>
+                    </button>
+
+                    <button onclick="openAidModal('choking')" class="glass-panel p-3.5 rounded-xl border-amber-500/20 hover:border-amber-500/50 transition-all flex items-center gap-3 group">
+                        <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fa-solid fa-wind"></i></div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Choking</div>
+                            <div class="text-[10px] text-slate-400">Heimlich Maneuver</div>
+                        </div>
+                    </button>
+
+                    <button onclick="openAidModal('burns')" class="glass-panel p-3.5 rounded-xl border-orange-500/20 hover:border-orange-500/50 transition-all flex items-center gap-3 group">
+                        <div class="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Severe Burns</div>
+                            <div class="text-[10px] text-slate-400">Cooling & Dressing</div>
+                        </div>
+                    </button>
+
+                    <button onclick="openAidModal('bleeding')" class="glass-panel p-3.5 rounded-xl border-rose-500/20 hover:border-rose-500/50 transition-all flex items-center gap-3 group">
+                        <div class="w-9 h-9 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fa-solid fa-droplet"></i></div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Bleeding</div>
+                            <div class="text-[10px] text-slate-400">Pressure Points</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="first-aid" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-kit-medical text-emerald-400"></i>
+                        Emergency & First-Aid Guides
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Step-by-step interactive procedures for immediate critical intervention.</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="filterCategory('all')" class="aid-filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500 text-slate-950 transition-all">All</button>
+                    <button onclick="filterCategory('critical')" class="aid-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold glass-panel text-slate-300 hover:text-white transition-all">Critical</button>
+                    <button onclick="filterCategory('environmental')" class="aid-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold glass-panel text-slate-300 hover:text-white transition-all">Environmental</button>
+                    <button onclick="filterCategory('common')" class="aid-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold glass-panel text-slate-300 hover:text-white transition-all">Common Injuries</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="aidCardsContainer">
+                <!-- CPR Card -->
+                <div class="aid-card glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between" data-category="critical" data-title="cpr cardiac arrest CPR">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-red-500/10 text-red-400 text-[11px] font-mono font-bold border border-red-500/20">Critical Life Saving</span>
+                            <i class="fa-solid fa-heart-pulse text-red-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">CPR & Cardiac Arrest</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Immediate chest compressions guide for unresponsive victims without normal breathing.</p>
+                    </div>
+                    <button onclick="openAidModal('cpr')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs text-slate-200 transition-all flex items-center justify-center gap-2">
+                        Start Guided Protocol <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Choking Card -->
+                <div class="aid-card glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between" data-category="critical" data-title="choking airway Heimlich">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold border border-amber-500/20">High Priority</span>
+                            <i class="fa-solid fa-wind text-amber-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Severe Airway Obstruction</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Back blows and abdominal thrusts (Heimlich Maneuver) protocol for adults and children.</p>
+                    </div>
+                    <button onclick="openAidModal('choking')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs text-slate-200 transition-all flex items-center justify-center gap-2">
+                        Start Guided Protocol <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Heatstroke Card -->
+                <div class="aid-card glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between" data-category="environmental" data-title="heatstroke heat exhaustion hyperthermia">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-[11px] font-mono font-bold border border-cyan-500/20">Environmental</span>
+                            <i class="fa-solid fa-sun text-cyan-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Heatstroke & Exhaustion</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Rapid cooling mechanisms, hydration guidelines, and neurological warning signs.</p>
+                    </div>
+                    <button onclick="openAidModal('heatstroke')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 font-bold text-xs text-slate-200 transition-all flex items-center justify-center gap-2">
+                        Start Guided Protocol <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Severe Bleeding Card -->
+                <div class="aid-card glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between" data-category="common" data-title="bleeding cuts trauma pressure tourniquet">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-rose-500/10 text-rose-400 text-[11px] font-mono font-bold border border-rose-500/20">Trauma</span>
+                            <i class="fa-solid fa-bandage text-rose-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Heavy Bleeding & Cuts</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Direct pressure application, elevation, pressure dressings, and tourniquet safety.</p>
+                    </div>
+                    <button onclick="openAidModal('bleeding')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs text-slate-200 transition-all flex items-center justify-center gap-2">
+                        Start Guided Protocol <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Thermal Burns Card -->
+                <div class="aid-card glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between" data-category="common" data-title="burns thermal scald chemical fire">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-orange-500/10 text-orange-400 text-[11px] font-mono font-bold border border-orange-500/20">Thermal Injury</span>
+                            <i class="fa-solid fa-fire text-orange-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Burns & Scalds Care</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Cool water treatment, sterile covering rules, and avoiding ice or home ointments.</p>
+                    </div>
+                    <button onclick="openAidModal('burns')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs text-slate-200 transition-all flex items-center justify-center gap-2">
+                        Start Guided Protocol <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Fractures & Sprains Card -->
+                <div class="aid-card glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between" data-category="common" data-title="fracture sprain bone joint PRICE">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[11px] font-mono font-bold border border-purple-500/20">Orthopedic</span>
+                            <i class="fa-solid fa-bone text-purple-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Fractures & Sprains</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Immobilization, PRICE technique (Protect, Rest, Ice, Compress, Elevate).</p>
+                    </div>
+                    <button onclick="openAidModal('fractures')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs text-slate-200 transition-all flex items-center justify-center gap-2">
+                        Start Guided Protocol <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculators" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+            <div class="mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-3">
+                    <i class="fa-solid fa-calculator text-cyan-400"></i>
+                    Interactive Health Calculators
+                </h2>
+                <p class="text-slate-400 text-sm mt-1">Calibrated hydration, BMI, daily metabolic rates, and exertion adjustments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Hydration & Water Need Calculator -->
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl relative overflow-hidden border">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-glass-water text-cyan-400"></i> Hydration Target Calculator
+                            </h3>
+                            <p class="text-slate-400 text-xs">Based on body weight, climate factor, and daily activity level.</p>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg">Fluid Balance</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Weight Slider -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-2">
+                                <span class="text-slate-300">Body Weight</span>
+                                <span class="text-cyan-400 font-mono" id="weightVal">70 kg</span>
+                            </div>
+                            <input type="range" id="weightInput" min="30" max="150" value="70" oninput="calculateHydration()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+                        </div>
+
+                        <!-- Activity Level Slider -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-2">
+                                <span class="text-slate-300">Daily Activity (Minutes)</span>
+                                <span class="text-cyan-400 font-mono" id="activityVal">30 mins</span>
+                            </div>
+                            <input type="range" id="activityInput" min="0" max="180" step="15" value="30" oninput="calculateHydration()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+                        </div>
+
+                        <!-- Climate Option -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Climate Environment</label>
+                            <select id="climateInput" onchange="calculateHydration()" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-400">
+                                <option value="moderate">Moderate / Temperate Climate</option>
+                                <option value="hot">Hot or High-Humidity Zone (+0.5L)</option>
+                                <option value="dry">High Altitude / Arid Climate (+0.4L)</option>
+                            </select>
+                        </div>
+
+                        <!-- Calculation Output -->
+                        <div class="p-5 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Recommended Water Intake</span>
+                                <div class="text-3xl font-extrabold text-cyan-300 font-mono mt-1" id="waterResult">2.55 Liters</div>
+                                <span class="text-xs text-slate-400" id="glassesResult">Approx. 10.2 Glasses (250ml)</span>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMI & Calorie Needs Calculator -->
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl relative overflow-hidden border">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-heart-pulse text-emerald-400"></i> Body Composition & Energy
+                            </h3>
+                            <p class="text-slate-400 text-xs">Calculate BMI score and daily basal maintenance calories.</p>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-lg">Biometrics</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Height Input -->
+                            <div>
+                                <div class="flex justify-between text-xs font-semibold mb-2">
+                                    <span class="text-slate-300">Height</span>
+                                    <span class="text-emerald-400 font-mono" id="heightVal">175 cm</span>
+                                </div>
+                                <input type="range" id="heightInput" min="120" max="220" value="175" oninput="calculateBMI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400">
+                            </div>
+
+                            <!-- Weight Input for BMI -->
+                            <div>
+                                <div class="flex justify-between text-xs font-semibold mb-2">
+                                    <span class="text-slate-300">Weight</span>
+                                    <span class="text-emerald-400 font-mono" id="bmiWeightVal">70 kg</span>
+                                </div>
+                                <input type="range" id="bmiWeightInput" min="30" max="150" value="70" oninput="calculateBMI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400">
+                            </div>
+                        </div>
+
+                        <!-- Biological Age Input -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-2">
+                                <span class="text-slate-300">Age</span>
+                                <span class="text-emerald-400 font-mono" id="ageVal">30 yrs</span>
+                            </div>
+                            <input type="range" id="ageInput" min="15" max="90" value="30" oninput="calculateBMI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400">
+                        </div>
+
+                        <!-- BMI Output Card -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/30">
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-mono">BMI Index</span>
+                                <div class="text-2xl font-extrabold text-emerald-300 font-mono mt-0.5" id="bmiScore">22.9</div>
+                                <span class="text-[11px] font-bold text-emerald-400" id="bmiCategory">Normal Weight</span>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-700/60">
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-mono">Basal Maintenance</span>
+                                <div class="text-2xl font-extrabold text-slate-200 font-mono mt-0.5" id="caloriesResult">1,650 kcal</div>
+                                <span class="text-[11px] text-slate-400">Est. Daily Energy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+            <div class="glass-panel p-6 sm:p-10 rounded-3xl border relative overflow-hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-3">
+                            <i class="fa-solid fa-clipboard-check text-emerald-400"></i>
+                            First-Aid Kit Readiness Checklist
+                        </h2>
+                        <p class="text-slate-400 text-sm mt-1">Check off items in your household kit to verify readiness score.</p>
+                    </div>
+
+                    <!-- Readiness Score Radial Indicator -->
+                    <div class="flex items-center gap-4 bg-slate-900/80 px-5 py-3 rounded-2xl border border-slate-800">
+                        <div>
+                            <div class="text-[10px] uppercase tracking-widest text-slate-400 font-mono">Kit Status</div>
+                            <div class="text-xl font-extrabold text-white font-mono" id="kitProgressPercent">0%</div>
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-4 border-slate-800 flex items-center justify-center relative" id="scoreCircle">
+                            <i class="fa-solid fa-shield-halved text-slate-600 text-lg" id="shieldIcon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="w-full bg-slate-800/80 h-3 rounded-full overflow-hidden mb-8 p-0.5 border border-slate-700/40">
+                    <div id="kitProgressBar" class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+
+                <!-- Interactive Checklist Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="checklistGrid">
+                    <!-- Dynamic rendering by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="pulse" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-slate-900/90 via-slate-950 to-emerald-950/20 relative overflow-hidden">
+                <div class="max-w-2xl">
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/20 inline-block mb-4">
+                        Weekly Intelligence Dispatch
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-3">
+                        Stay Ahead of Health Risks & Seasonals
+                    </h2>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Subscribe to HealthCura Digital's concise, spam-free pulse digest. Receive doctor-reviewed emergency tips, seasonal outbreak alerts, and kit maintenance reminders directly.
+                    </p>
+
+                    <form id="pulseForm" onsubmit="handlePulseSubscribe(event)" class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" required placeholder="Enter your email address..." 
+                            class="flex-1 bg-slate-900/90 border border-slate-700/80 rounded-xl px-4 py-3.5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-400">
+                        <button type="submit" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-extrabold text-sm hover:brightness-110 transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-lg shadow-emerald-500/20">
+                            Join Weekly Pulse <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                    <div id="pulseFeedback" class="mt-3 text-xs font-semibold hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-slate-500 text-xs border-t border-slate-800/80 mt-20">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">H</div>
+                    <span class="text-slate-300 font-bold">HealthCura Digital</span>
+                    <span>© 2026. All rights reserved.</span>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="#first-aid" class="hover:text-slate-300 transition-colors">Emergency Guides</a>
+                    <a href="#calculators" class="hover:text-slate-300 transition-colors">Calculators</a>
+                    <a href="#checklist" class="hover:text-slate-300 transition-colors">Kit Readiness</a>
+                </div>
+            </div>
+
+            <p class="mt-6 text-[11px] leading-relaxed text-slate-600 bg-slate-950/50 p-4 rounded-xl border border-slate-900">
+                <strong class="text-slate-400">Medical Disclaimer:</strong> HealthCura Digital is an educational interactive information tool designed to support, not replace, professional medical evaluation or emergency care services. In case of a critical life-threatening emergency, call local emergency services immediately (911 / 112).
+            </p>
+        </footer>
+    </main>
+
+    <div id="aidModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-panel bg-slate-900/95 border border-slate-700/60 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeAidModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="aidModalContent">
+                <!-- Dynamically populated by JS -->
+            </div>
         </div>
-        
-      </div>
-      <div class="shot card shadow">
-        <img src="https://smagicmojo.github.io/mojo-coin/35830DF8-1963-4E91-88AF-BACF84091AA9.png" alt="Home Doctor Book">
-      </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section class="section">
-      <h2>What You’ll Learn</h2>
-      <div class="grid cols-3">
-        <div class="card benefit"><h3>Home Treatments</h3><p>Clear instructions for common issues when a clinic isn’t available.</p></div>
-        <div class="card benefit"><h3>Critical Symptoms</h3><p>Spot danger early and know when an issue can’t wait.</p></div>
-        <div class="card benefit"><h3>Essential Supplies</h3><p>Build a kit with affordable items you can keep at home.</p></div>
-      </div>
-    </section>
-
-    <!-- SOCIAL PROOF -->
-    <section class="section">
-      <h2>Why Readers Recommend It</h2>
-      <div class="grid cols-3">
-        <figure class="card quote"><div class="stars">★★★★★</div><blockquote>“Simple, calm guidance I could follow during a power outage.”</blockquote><small class="muted">— Noura A.</small></figure>
-        <figure class="card quote"><div class="stars">★★★★★</div><blockquote>“Exactly the practical advice every home should keep on a shelf.”</blockquote><small class="muted">— Daniel P.</small></figure>
-        <figure class="card quote"><div class="stars">★★★★☆</div><blockquote>“Great checklists. Helped me make a proper first-aid kit.”</blockquote><small class="muted">— Priya S.</small></figure>
-      </div>
-    </section>
-
-    <!-- EMAIL CAPTURE -->
-    <section id="newsletter" class="section">
-      <h2>Free Health Tips + Emergency Checklists</h2>
-      <p class="muted">Join our weekly email with practical first-aid knowledge and at-home care guides.</p>
-      <div class="card email-box shadow">
-        <form id="lead-form" class="form" autocomplete="on">
-          <input class="input" type="email" name="email" id="email" placeholder="Enter your email" required>
-          <button class="submit" type="submit">Subscribe & Get Free Guide</button>
-          <div id="form-msg" class="note"></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section">
-      <h2>What’s Inside</h2>
-      <div class="grid cols-3">
-        <div class="card benefit"><h3>Step-by-Step Methods</h3><p>Follow clear instructions with checklists for quick action.</p></div>
-        <div class="card benefit"><h3>Everyday Remedies</h3><p>Use items most households already have on hand.</p></div>
-        <div class="card benefit"><h3>Emergency Readiness</h3><p>Prepare for grid-down, storms, or travel far from clinics.</p></div>
-      </div>
-      <p style="margin-top:16px"><a class="btn primary" href="#" data-cta>Get Your Copy</a></p>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-      <h2>FAQ</h2>
-      <details><summary>Is it beginner-friendly?</summary><p class="muted">Yes. The book is written in simple language with illustrations and checklists.</p></details>
-      <details><summary>Does it replace doctors?</summary><p class="muted">No. It helps you act responsibly when expert help is delayed or unavailable.</p></details>
-      <details><summary>Is there a supplies list?</summary><p class="muted">Yes. You’ll find a practical kit list you can assemble at home.</p></details>
-    </section>
-  </main>
-
-  <!-- MOBILE FLOAT CTA -->
-  <div class="float-cta">
-    <div class="muted" style="font-weight:700">Ready to be prepared?</div>
-    <a class="btn primary" href="#" data-cta>Get The Home Doctor</a>
-  </div>
-
-  <footer>
-    <div class="wrap">
-      <small>© <span id="year"></span> Home Doctor – Affiliate Page</small><br>
-      <small class="muted">Medical disclaimer: This page is informational and not a substitute for professional care.</small>
     </div>
-  </footer>
 
-<script>
-  // === SET THESE TWO VALUES ===
-  const AFF_URL = "https://homedoctorbook.com/book/#aff=salihxalu"; // your affiliate link
-  const FORM_POST_URL = "https://script.google.com/macros/s/REPLACE_WITH_YOUR_WEB_APP_ID/exec"; // Google Apps Script Web App
+    <div id="cprModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-panel bg-slate-900/95 border border-red-500/30 rounded-3xl max-w-md w-full p-6 text-center relative shadow-2xl">
+            <button onclick="toggleCPRModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-  // Apply affiliate link to all CTAs
-  document.querySelectorAll('[data-cta]').forEach(el=>{
-    el.addEventListener('click', e=>{ e.preventDefault(); window.open(AFF_URL, '_blank'); });
-    el.setAttribute('href', AFF_URL);
-  });
+            <span class="px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-mono font-bold border border-red-500/20 inline-block mb-3">
+                100 - 120 BPM Metronome
+            </span>
 
-  // Simple deadline timer (12 hours, stored per device)
-  const HOURS=12, KEY='deal_deadline';
-  let deadline = localStorage.getItem(KEY) ? new Date(localStorage.getItem(KEY)) : new Date(Date.now()+HOURS*3600*1000);
-  if(!localStorage.getItem(KEY)) localStorage.setItem(KEY, deadline.toISOString());
-  function tick(){
-    const now=new Date(); let d=Math.max(0, deadline-now);
-    const h=String(Math.floor(d/3600000)).padStart(2,'0'); d%=3600000;
-    const m=String(Math.floor(d/60000)).padStart(2,'0'); d%=60000;
-    const s=String(Math.floor(d/1000)).padStart(2,'0');
-    document.getElementById('t-h').textContent=h;
-    document.getElementById('t-m').textContent=m;
-    document.getElementById('t-s').textContent=s;
-  }
-  tick(); setInterval(tick,1000);
-  document.getElementById('year').textContent=new Date().getFullYear();
+            <h3 class="text-2xl font-bold text-white mb-2">CPR Compression Timing</h3>
+            <p class="text-slate-400 text-xs mb-6">Push hard and fast in the center of the chest to this rhythmic beat.</p>
 
-  // Email capture → Google Apps Script
-  const form = document.getElementById('lead-form');
-  const msg  = document.getElementById('form-msg');
-  form.addEventListener('submit', async (e)=>{
-    e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    if(!email){ msg.textContent="Please enter a valid email."; return; }
-    msg.textContent="Submitting…";
-    try{
-      const res = await fetch(FORM_POST_URL, {
-        method:'POST',
-        headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body:new URLSearchParams({email})
-      });
-      const text = await res.text();
-      if(text.includes("SUCCESS")) {
-        msg.textContent="You're in! Check your inbox for the guide.";
-        form.reset();
-        // Optional: redirect to affiliate after signup
-        setTimeout(()=>window.open(AFF_URL,'_blank'), 800);
-      } else {
-        msg.textContent="Something went wrong. Please try again.";
-      }
-    }catch(err){
-      msg.textContent="Network error. Please try again.";
-    }
-  });
-</script>
+            <div class="my-8 flex justify-center">
+                <div id="cprPulseVisual" class="w-28 h-28 rounded-full bg-red-500/20 border-2 border-red-500 flex flex-col items-center justify-center transition-transform">
+                    <i class="fa-solid fa-heart text-red-500 text-3xl"></i>
+                    <span class="text-[10px] text-red-300 font-mono mt-1 font-bold" id="bpmCounter">110 BPM</span>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-3">
+                <button id="cprMetronomeBtn" onclick="toggleCPRMetronome()" class="px-6 py-3 rounded-xl bg-red-500 text-white font-bold text-xs hover:bg-red-600 transition-all shadow-lg shadow-red-500/30 flex items-center gap-2">
+                    <i class="fa-solid fa-play" id="cprMetronomeIcon"></i>
+                    <span id="cprMetronomeText">Start Rhythm Audio</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* Interactive First-Aid Protocol Database */
+        const aidProtocols = {
+            cpr: {
+                title: "CPR (Cardiopulmonary Resuscitation)",
+                category: "Critical Life Support",
+                icon: "fa-heart-pulse",
+                color: "text-red-400",
+                steps: [
+                    "Verify scene safety and check for responsiveness (Tap shoulder and speak loud).",
+                    "Call emergency services immediately (911) or assign a bystander.",
+                    "Place heel of hand on lower center of chest, lock elbows, push hard & fast (100–120 bpm).",
+                    "Compress at least 2 inches deep, allowing full chest recoil after each push.",
+                    "If trained, deliver 2 rescue breaths after every 30 compressions."
+                ],
+                warning: "Do not stop compressions until emergency medical personnel take over or victim recovers."
+            },
+            choking: {
+                title: "Severe Airway Choking",
+                category: "Airway Emergency",
+                icon: "fa-wind",
+                color: "text-amber-400",
+                steps: [
+                    "Ask 'Are you choking?' - If victim cannot speak or cough, act immediately.",
+                    "Give 5 sharp back blows between shoulder blades using the heel of your hand.",
+                    "Give 5 quick abdominal thrusts (Heimlich): Stand behind victim, clasp hands above navel, pull inward and upward.",
+                    "Alternate 5 back blows and 5 abdominal thrusts until object is dislodged."
+                ],
+                warning: "If victim loses consciousness, lower them gently to the ground and start CPR immediately."
+            },
+            heatstroke: {
+                title: "Heatstroke & Severe Hyperthermia",
+                category: "Environmental Emergency",
+                icon: "fa-sun",
+                color: "text-cyan-400",
+                steps: [
+                    "Move person to a cool, shaded area immediately.",
+                    "Call emergency help - Heatstroke is a medical emergency with altered mental state.",
+                    "Cool rapidly: apply cold wet sheets, ice packs to neck, armpits, and groin.",
+                    "Fan continuously to promote evaporative cooling."
+                ],
+                warning: "Do NOT force water intake if victim is confused or unconscious."
+            },
+            bleeding: {
+                title: "Severe External Bleeding",
+                category: "Trauma Protocol",
+                icon: "fa-bandage",
+                color: "text-rose-400",
+                steps: [
+                    "Apply firm, direct pressure on the wound with sterile gauze or clean cloth.",
+                    "Maintain continuous pressure without lifting gauze to check wound.",
+                    "If blood soaks through, place additional cloth directly on top.",
+                    "For severe limb hemorrhage, apply a commercial tourniquet 2-3 inches above wound if trained."
+                ],
+                warning: "Never remove blood-soaked bandages directly from the wound site."
+            },
+            burns: {
+                title: "Thermal Burn First Aid",
+                category: "Thermal Injury",
+                icon: "fa-fire",
+                color: "text-orange-400",
+                steps: [
+                    "Cool burn immediately under cool running tap water for 10 to 20 minutes.",
+                    "Remove clothing/jewelry near burn site before swelling occurs (unless stuck to burn).",
+                    "Cover loosely with sterile non-stick bandage or plastic cling wrap.",
+                    "Do NOT apply ice, butter, ointment, or pop blisters."
+                ],
+                warning: "Seek urgent medical care for large burns, face/hand burns, or chemical/electrical burns."
+            },
+            fractures: {
+                title: "Fractures & Severe Sprains",
+                category: "Orthopedic",
+                icon: "fa-bone",
+                color: "text-purple-400",
+                steps: [
+                    "Immobilize the injured area immediately - Do not try to realign bone.",
+                    "Apply cold pack wrapped in towel for 15-20 minutes to reduce swelling.",
+                    "Support limb with padded splint or sling if transport is needed.",
+                    "Elevate injured limb above heart level if comfortable."
+                ],
+                warning: "Check pulse and skin temperature below injury site for circulation issues."
+            }
+        };
+
+        /* First Aid Checklist Database */
+        const checklistItems = [
+            { id: "item1", name: "Sterile Gauze Pads (4x4)", category: "Dressings" },
+            { id: "item2", name: "Adhesive Bandages (Assorted)", category: "Dressings" },
+            { id: "item3", name: "Medical Elastic Bandage (Ace)", category: "Dressings" },
+            { id: "item4", name: "Adhesive Medical Tape", category: "Dressings" },
+            { id: "item5", name: "Antiseptic Wipes / Isopropyl", category: "Sanitization" },
+            { id: "item6", name: "Nitrile Gloves (2 pairs min)", category: "Protection" },
+            { id: "item7", name: "Medical Scissors & Tweezers", category: "Tools" },
+            { id: "item8", name: "Digital Thermometer", category: "Diagnostics" },
+            { id: "item9", name: "Instant Cold Packs", category: "Trauma" }
+        ];
+
+        /* Init Functions on Load */
+        window.addEventListener('DOMContentLoaded', () => {
+            initCanvasBg();
+            renderChecklist();
+            calculateHydration();
+            calculateBMI();
+        });
+
+        /* --- STREAMING_CHUNK: Canvas Ambient Light Particle Effect --- */
+        function initCanvasBg() {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            for (let i = 0; i < 45; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 2 + 1,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
+                    alpha: Math.random() * 0.5 + 0.1
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                    if (p.y < 0) p.y = height;
+                    if (p.y > height) p.y = 0;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`;
+                    ctx.fill();
+                });
+
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        /* --- STREAMING_CHUNK: First Aid Filter Logic --- */
+        function filterFirstAid() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.aid-card');
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterCategory(cat) {
+            const cards = document.querySelectorAll('.aid-card');
+            const btns = document.querySelectorAll('.aid-filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-emerald-500', 'text-slate-950');
+                btn.classList.add('glass-panel', 'text-slate-300');
+            });
+            event.target.classList.add('bg-emerald-500', 'text-slate-950');
+            event.target.classList.remove('glass-panel', 'text-slate-300');
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        /* --- STREAMING_CHUNK: First Aid Protocol Modal Logic --- */
+        function openAidModal(key) {
+            const proto = aidProtocols[key];
+            if (!proto) return;
+
+            const modal = document.getElementById('aidModal');
+            const content = document.getElementById('aidModalContent');
+
+            let stepsHTML = proto.steps.map((step, idx) => `
+                <li class="flex items-start gap-3 bg-slate-800/40 p-3 rounded-xl border border-slate-700/50">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">${idx + 1}</span>
+                    <span class="text-xs text-slate-200 leading-relaxed">${step}</span>
+                </li>
+            `).join('');
+
+            content.innerHTML = `
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/20">${proto.category}</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fa-solid ${proto.icon} ${proto.color}"></i> ${proto.title}
+                </h3>
+                
+                <p class="text-xs text-slate-400 uppercase tracking-wider font-mono mb-3">Step-by-Step Response:</p>
+                <ul class="space-y-2.5 mb-6">
+                    ${stepsHTML}
+                </ul>
+
+                <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3 text-amber-300 text-xs">
+                    <i class="fa-solid fa-triangle-exclamation text-base shrink-0"></i>
+                    <div>
+                        <strong>Important Safety Warning:</strong>
+                        <p class="mt-0.5">${proto.warning}</p>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+        }
+
+        function closeAidModal() {
+            const modal = document.getElementById('aidModal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        /* --- STREAMING_CHUNK: CPR Metronome Beat Controller --- */
+        let audioCtx = null;
+        let metronomeInterval = null;
+        let isMetronomePlaying = false;
+
+        function toggleCPRModal() {
+            const modal = document.getElementById('cprModal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                setTimeout(() => modal.classList.remove('opacity-0'), 10);
+            } else {
+                stopCPRMetronome();
+                modal.classList.add('opacity-0');
+                setTimeout(() => modal.classList.add('hidden'), 300);
+            }
+        }
+
+        function toggleCPRMetronome() {
+            if (isMetronomePlaying) {
+                stopCPRMetronome();
+            } else {
+                startCPRMetronome();
+            }
+        }
+
+        function startCPRMetronome() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            isMetronomePlaying = true;
+            document.getElementById('cprPulseVisual').classList.add('cpr-active');
+            document.getElementById('cprMetronomeIcon').className = 'fa-solid fa-square';
+            document.getElementById('cprMetronomeText').textContent = 'Stop Metronome';
+
+            // 110 BPM -> ~545ms per beat
+            metronomeInterval = setInterval(() => {
+                playClickSound();
+            }, 545);
+        }
+
+        function stopCPRMetronome() {
+            isMetronomePlaying = false;
+            if (metronomeInterval) clearInterval(metronomeInterval);
+            document.getElementById('cprPulseVisual').classList.remove('cpr-active');
+            document.getElementById('cprMetronomeIcon').className = 'fa-solid fa-play';
+            document.getElementById('cprMetronomeText').textContent = 'Start Rhythm Audio';
+        }
+
+        function playClickSound() {
+            if (!audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.08);
+        }
+
+        /* --- STREAMING_CHUNK: Health & Hydration Calculators Logic --- */
+        function calculateHydration() {
+            const weight = parseFloat(document.getElementById('weightInput').value);
+            const activity = parseFloat(document.getElementById('activityInput').value);
+            const climate = document.getElementById('climateInput').value;
+
+            document.getElementById('weightVal').textContent = weight + ' kg';
+            document.getElementById('activityVal').textContent = activity + ' mins';
+
+            // Base calculation: ~35ml per kg
+            let baseLitres = (weight * 35) / 1000;
+            // Activity adjustment: ~350ml per 30 mins
+            baseLitres += (activity / 30) * 0.35;
+
+            if (climate === 'hot') baseLitres += 0.5;
+            if (climate === 'dry') baseLitres += 0.4;
+
+            const glasses = Math.round(baseLitres / 0.25);
+
+            document.getElementById('waterResult').textContent = baseLitres.toFixed(2) + ' Liters';
+            document.getElementById('glassesResult').textContent = `Approx. ${glasses} Glasses (250ml)`;
+        }
+
+        function calculateBMI() {
+            const height = parseFloat(document.getElementById('heightInput').value);
+            const weight = parseFloat(document.getElementById('bmiWeightInput').value);
+            const age = parseFloat(document.getElementById('ageInput').value);
+
+            document.getElementById('heightVal').textContent = height + ' cm';
+            document.getElementById('bmiWeightVal').textContent = weight + ' kg';
+            document.getElementById('ageVal').textContent = age + ' yrs';
+
+            // BMI = weight(kg) / (height(m))^2
+            const heightM = height / 100;
+            const bmi = weight / (heightM * heightM);
+
+            document.getElementById('bmiScore').textContent = bmi.toFixed(1);
+
+            let cat = "Normal Weight";
+            let catColor = "text-emerald-400";
+
+            if (bmi < 18.5) { cat = "Underweight"; catColor = "text-amber-400"; }
+            else if (bmi >= 25 && bmi < 29.9) { cat = "Overweight"; catColor = "text-amber-400"; }
+            else if (bmi >= 30) { cat = "Obese"; catColor = "text-rose-400"; }
+
+            const catEl = document.getElementById('bmiCategory');
+            catEl.textContent = cat;
+            catEl.className = `text-[11px] font-bold ${catColor}`;
+
+            // Mifflin-St Jeor BMR estimation (neutral avg)
+            const bmr = Math.round((10 * weight) + (6.25 * height) - (5 * age) + 5);
+            document.getElementById('caloriesResult').textContent = bmr.toLocaleString() + ' kcal';
+        }
+
+        /* --- STREAMING_CHUNK: First Aid Kit Readiness Checklist --- */
+        function renderChecklist() {
+            const grid = document.getElementById('checklistGrid');
+            grid.innerHTML = checklistItems.map(item => `
+                <label class="glass-panel p-3.5 rounded-xl border border-slate-800 flex items-center gap-3 cursor-pointer hover:border-emerald-500/40 transition-all select-none">
+                    <input type="checkbox" onchange="updateKitReadiness()" class="w-4 h-4 rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 bg-slate-900 cursor-pointer">
+                    <div>
+                        <div class="text-xs font-semibold text-slate-200">${item.name}</div>
+                        <div class="text-[10px] text-slate-500 font-mono">${item.category}</div>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function updateKitReadiness() {
+            const checkboxes = document.querySelectorAll('#checklistGrid input[type="checkbox"]');
+            let checkedCount = 0;
+            checkboxes.forEach(cb => { if (cb.checked) checkedCount++; });
+
+            const percentage = Math.round((checkedCount / checklistItems.length) * 100);
+
+            document.getElementById('kitProgressPercent').textContent = percentage + '%';
+            document.getElementById('kitProgressBar').style.width = percentage + '%';
+
+            const shieldIcon = document.getElementById('shieldIcon');
+            if (percentage === 100) {
+                shieldIcon.className = "fa-solid fa-shield-halved text-emerald-400 text-lg animate-bounce";
+            } else if (percentage > 50) {
+                shieldIcon.className = "fa-solid fa-shield-halved text-cyan-400 text-lg";
+            } else {
+                shieldIcon.className = "fa-solid fa-shield-halved text-slate-600 text-lg";
+            }
+        }
+
+        /* --- STREAMING_CHUNK: Newsletter Submit Simulation --- */
+        function handlePulseSubscribe(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('pulseFeedback');
+            feedback.textContent = "✓ Success! You are now subscribed to HealthCura Weekly Pulse.";
+            feedback.className = "mt-3 text-xs font-semibold text-emerald-400 block";
+            e.target.reset();
+        }
+    </script>
 </body>
 </html>
