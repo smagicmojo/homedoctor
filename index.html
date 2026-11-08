@@ -1,754 +1,92 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCura Digital — Pro Medical Gear & Emergency Supplies</title>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#059669',
-                            blue: '#3b82f6',
-                            cyan: '#06b6d4',
-                            darkBg: '#080d1a',
-                            cardBg: 'rgba(15, 23, 42, 0.75)',
-                            border: 'rgba(255, 255, 255, 0.08)'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #060b17;
-            color: #f1f5f9;
-            overflow-x: hidden;
-        }
-
-        .glass-panel {
-            background: rgba(13, 22, 41, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .glass-panel-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-panel-hover:hover {
-            background: rgba(18, 30, 56, 0.88);
-            border-color: rgba(16, 185, 129, 0.35);
-            transform: translateY(-4px);
-            box-shadow: 0 16px 32px -10px rgba(16, 185, 129, 0.15);
-        }
-
-        .glow-text {
-            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #060b17;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #10b981;
-        }
-
-        /* Toast animation */
-        @keyframes toastSlide {
-            0% { transform: translateY(100%) scale(0.9); opacity: 0; }
-            100% { transform: translateY(0) scale(1); opacity: 1; }
-        }
-        .toast-animate {
-            animation: toastSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BSV International connects businesses with dependable manpower and workforce supply partners.">
+<title>BSV International | Manpower Solutions</title>
+<style>
+:root{--navy:#10243b;--blue:#173e63;--gold:#d6a84f;--ink:#182536;--muted:#667487;--light:#f4f7fa;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1140px,92%);margin:auto}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #ffffff20}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}.logo{width:46px;height:46px;border:2px solid var(--gold);border-radius:10px;display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:17px}.brand small{display:block;font-size:10px;letter-spacing:2px;color:#c6d1dd;font-weight:600}.links{display:flex;gap:26px;align-items:center;font-size:14px;color:#e8edf3}.links a:hover{color:var(--gold)}.navbtn,.btn{display:inline-block;background:var(--gold);color:#17283a;padding:12px 19px;border-radius:6px;font-weight:800;font-size:14px;border:0;cursor:pointer}.menu{display:none;background:none;color:white;border:0;font-size:26px}
+.hero{background:linear-gradient(110deg,rgba(9,25,43,.96),rgba(15,47,76,.83)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1900&q=85') center/cover;color:white;padding:105px 0 100px}.hero-inner{max-width:720px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.08;margin:17px 0}.hero p{font-size:18px;color:#dce5ed;max-width:620px;margin:0 0 28px}.btn-outline{display:inline-block;border:1px solid #ffffff80;color:#fff;padding:11px 18px;border-radius:6px;margin-left:10px;font-weight:700;font-size:14px}.trust{background:#fff;box-shadow:0 8px 30px #142b4212;position:relative;margin-top:-30px;border-radius:10px;padding:23px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.trust strong{display:block;color:var(--navy);font-size:16px}.trust span{font-size:13px;color:var(--muted)}
+section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 40px}.section-head h2{font-size:34px;color:var(--navy);margin:8px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid #e5eaf0;border-radius:10px;padding:27px;background:#fff;box-shadow:0 8px 24px #10243b08}.card .symbol{width:48px;height:48px;border-radius:9px;background:#f7f0e2;color:#9b7229;display:grid;place-items:center;font-size:22px}.card h3{color:var(--navy);margin:17px 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}.about{background:var(--light)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-image{min-height:390px;border-radius:12px;background:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1100&q=85') center/cover}.about h2{font-size:36px;color:var(--navy);line-height:1.15}.about p{color:var(--muted)}.checks{padding:0;list-style:none}.checks li{margin:12px 0}.checks li:before{content:'✓';color:#b18435;font-weight:900;margin-right:10px}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step{border-left:3px solid var(--gold);padding:5px 0 5px 18px}.step b{font-size:12px;color:#a47a32;letter-spacing:1px}.step h3{margin:5px 0;color:var(--navy)}.step p{font-size:14px;color:var(--muted);margin:0}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:66px 0}.cta h2{font-size:34px;margin:0 0 10px}.cta p{color:#d5deea;margin:0 auto 24px;max-width:650px}
+.contact{background:var(--light)}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}.contact-info{background:var(--navy);color:#fff;padding:30px;border-radius:10px}.contact-info p{color:#d5deea}.contact-info a{color:var(--gold)}form{background:#fff;padding:30px;border-radius:10px;box-shadow:0 8px 24px #10243b0b}.field{margin-bottom:15px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--navy)}input,select,textarea{width:100%;padding:12px;border:1px solid #dce3eb;border-radius:6px;font:inherit;font-size:14px}textarea{min-height:110px;resize:vertical}.form-note{font-size:12px;color:var(--muted);margin-top:12px}
+footer{background:#0a1929;color:#c5d0dc;padding:28px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:white}
+@media(max-width:760px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:20px;flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.navbtn{display:none}.hero{padding:75px 0}.trust,.cards,.about-grid,.process,.contact-grid{grid-template-columns:1fr}.trust{margin-top:-18px}.about-image{min-height:260px}section{padding:62px 0}.section-head h2,.about h2{font-size:29px}.btn-outline{margin:12px 0 0}}
+</style>
 </head>
-<body class="relative min-h-screen selection:bg-emerald-500 selection:text-black">
-
-    <!-- Dynamic Particle Physics Background -->
-    <canvas id="bg-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
-
-    <header class="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 py-4 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto glass-panel rounded-2xl px-5 py-3 flex items-center justify-between shadow-2xl">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-blue-500 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-truck-medical"></i>
-                </div>
-                <div>
-                    <span class="font-extrabold text-lg tracking-tight text-white flex items-center gap-1.5">
-                        HealthCura <span class="glow-text">Store</span>
-                    </span>
-                    <span class="text-[10px] tracking-widest uppercase text-slate-400 block font-mono">Pro Medical & Emergency Gear</span>
-                </div>
-            </a>
-
-            <!-- Quick Search Bar & Category Filter -->
-            <div class="hidden lg:flex items-center gap-3 flex-1 max-w-md mx-8">
-                <div class="relative w-full">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-                    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search first aid, scales, BP monitors..." 
-                        class="w-full pl-9 pr-4 py-2 bg-slate-900/80 border border-slate-700/60 rounded-xl text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-400">
-                </div>
-            </div>
-
-            <!-- Cart Trigger Button -->
-            <div class="flex items-center gap-3">
-                <button onclick="toggleCartDrawer()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700/60 text-slate-200 transition-all flex items-center gap-3 group relative">
-                    <i class="fa-solid fa-cart-shopping text-emerald-400 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-left hidden sm:block">
-                        <div class="text-[10px] text-slate-400 font-mono leading-none">Your Cart</div>
-                        <div class="text-xs font-bold text-white font-mono mt-0.5" id="cartHeaderTotal">$0.00</div>
-                    </div>
-                    <span id="cartBadgeCount" class="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 text-[11px] font-black flex items-center justify-center font-mono">0</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main class="relative z-10 pt-28 pb-20">
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-emerald-500/20 bg-gradient-to-r from-slate-900/90 via-slate-950 to-emerald-950/20 relative overflow-hidden shadow-2xl">
-                <div class="max-w-2xl relative z-10 space-y-4">
-                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/20 inline-flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                        Direct Express Dispatch Active
-                    </span>
-                    <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                        Clinical Grade Supplies & <span class="glow-text">Smart Diagnostics</span>
-                    </h1>
-                    <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-                        Equip your household and vehicles with tested emergency trauma response bags, certified 72-hour survival kits, and precision biometric monitoring gear.
-                    </p>
-                    <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <a href="#catalog" class="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-500 text-slate-950 font-extrabold text-xs sm:text-sm hover:brightness-110 transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
-                            Explore Catalog <i class="fa-solid fa-arrow-down"></i>
-                        </a>
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <i class="fa-solid fa-shield-halved text-emerald-400 text-sm"></i>
-                            100% Medical Grade Verified
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                <!-- Categories Tabs -->
-                <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="categoryTabs">
-                    <button onclick="setCategory('all')" class="cat-tab active px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 text-slate-950 whitespace-nowrap transition-all">All Products</button>
-                    <button onclick="setCategory('firstaid')" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold glass-panel text-slate-300 hover:text-white whitespace-nowrap transition-all">First Aid & Trauma</button>
-                    <button onclick="setCategory('diagnostic')" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold glass-panel text-slate-300 hover:text-white whitespace-nowrap transition-all">Diagnostic Devices</button>
-                    <button onclick="setCategory('survival')" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold glass-panel text-slate-300 hover:text-white whitespace-nowrap transition-all">Survival Gear</button>
-                </div>
-
-                <!-- Sort Control -->
-                <div class="flex items-center gap-3">
-                    <span class="text-xs text-slate-400 font-mono whitespace-nowrap">Sort by:</span>
-                    <select id="sortSelect" onchange="sortProducts()" class="bg-slate-900 border border-slate-700/80 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                        <option value="featured">Featured / Popular</option>
-                        <option value="low">Price: Low to High</option>
-                        <option value="high">Price: High to Low</option>
-                        <option value="rating">Highest Rated</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Product Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid">
-                <!-- Dynamically rendered by JavaScript -->
-            </div>
-        </section>
-    </main>
-
-    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
-        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
-        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
-            <div class="w-screen max-w-md glass-panel bg-slate-900/95 border-l border-slate-800 p-6 flex flex-col justify-between shadow-2xl relative">
-                <!-- Drawer Header -->
-                <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-cart-shopping text-emerald-400 text-lg"></i>
-                        <h2 class="text-lg font-bold text-white">Shopping Cart</h2>
-                    </div>
-                    <button onclick="toggleCartDrawer()" class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-
-                <!-- Cart Items Container -->
-                <div class="flex-1 overflow-y-auto py-4 space-y-4" id="cartItemsContainer">
-                    <!-- Dynamic rendering -->
-                </div>
-
-                <!-- Cart Summary & Checkout -->
-                <div class="pt-4 border-t border-slate-800 space-y-4">
-                    <!-- Promo Code Input -->
-                    <div class="flex gap-2">
-                        <input type="text" id="promoInput" placeholder="Promo code (e.g. HEALTH10)" class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 uppercase font-mono focus:outline-none focus:border-emerald-400">
-                        <button onclick="applyPromoCode()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all">Apply</button>
-                    </div>
-
-                    <!-- Price Calculations -->
-                    <div class="space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between text-slate-400">
-                            <span>Subtotal:</span>
-                            <span id="cartSubtotal">$0.00</span>
-                        </div>
-                        <div class="flex justify-between text-slate-400">
-                            <span>Discount:</span>
-                            <span id="cartDiscount" class="text-emerald-400">-$0.00</span>
-                        </div>
-                        <div class="flex justify-between text-slate-400">
-                            <span>Shipping Express:</span>
-                            <span id="cartShipping" class="text-emerald-400">FREE</span>
-                        </div>
-                        <div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-slate-800">
-                            <span>Total Amount:</span>
-                            <span id="cartGrandTotal" class="text-emerald-400">$0.00</span>
-                        </div>
-                    </div>
-
-                    <button onclick="openCheckoutModal()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-500 text-slate-950 font-extrabold text-sm hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
-                        Proceed to Checkout <i class="fa-solid fa-lock text-xs"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Quick View Product Modal -->
-    <div id="quickViewModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
-        <div class="glass-panel bg-slate-900/95 border border-slate-700/60 rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto" id="quickViewContent">
-            <!-- Dynamic populating -->
-        </div>
-    </div>
-
-    <!-- Multi-Step Checkout Modal -->
-    <div id="checkoutModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
-        <div class="glass-panel bg-slate-900/95 border border-slate-700/60 rounded-3xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
-            <button onclick="closeCheckoutModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <h3 class="text-xl font-bold text-white mb-1 flex items-center gap-2">
-                <i class="fa-solid fa-shield-heart text-emerald-400"></i> Secure Checkout
-            </h3>
-            <p class="text-xs text-slate-400 mb-6 font-mono">Order Verification & Delivery Dispatch</p>
-
-            <form onsubmit="handlePlaceOrder(event)" class="space-y-4">
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-[11px] font-semibold text-slate-300 mb-1">First Name</label>
-                        <input type="text" required placeholder="John" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                    </div>
-                    <div>
-                        <label class="block text-[11px] font-semibold text-slate-300 mb-1">Last Name</label>
-                        <input type="text" required placeholder="Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-[11px] font-semibold text-slate-300 mb-1">Email Address</label>
-                    <input type="email" required placeholder="john@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                </div>
-
-                <div>
-                    <label class="block text-[11px] font-semibold text-slate-300 mb-1">Shipping Street Address</label>
-                    <input type="text" required placeholder="123 Medical Center Blvd, Suite 400" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                </div>
-
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-[11px] font-semibold text-slate-300 mb-1">City / Region</label>
-                        <input type="text" required placeholder="New York / Dammam" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                    </div>
-                    <div>
-                        <label class="block text-[11px] font-semibold text-slate-300 mb-1">Postal / ZIP Code</label>
-                        <input type="text" required placeholder="10001" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-400">
-                    </div>
-                </div>
-
-                <!-- Payment Method Selector -->
-                <div>
-                    <label class="block text-[11px] font-semibold text-slate-300 mb-2">Select Payment Method</label>
-                    <div class="grid grid-cols-3 gap-2">
-                        <label class="glass-panel p-3 rounded-xl border border-slate-800 flex flex-col items-center gap-1 cursor-pointer hover:border-emerald-500/50">
-                            <input type="radio" name="payment" value="card" checked class="text-emerald-500 focus:ring-emerald-400">
-                            <i class="fa-solid fa-credit-card text-slate-300 text-sm mt-1"></i>
-                            <span class="text-[10px] font-bold text-slate-300">Credit Card</span>
-                        </label>
-                        <label class="glass-panel p-3 rounded-xl border border-slate-800 flex flex-col items-center gap-1 cursor-pointer hover:border-emerald-500/50">
-                            <input type="radio" name="payment" value="apple" class="text-emerald-500 focus:ring-emerald-400">
-                            <i class="fa-brands fa-apple text-slate-300 text-sm mt-1"></i>
-                            <span class="text-[10px] font-bold text-slate-300">Apple Pay</span>
-                        </label>
-                        <label class="glass-panel p-3 rounded-xl border border-slate-800 flex flex-col items-center gap-1 cursor-pointer hover:border-emerald-500/50">
-                            <input type="radio" name="payment" value="cod" class="text-emerald-500 focus:ring-emerald-400">
-                            <i class="fa-solid fa-hand-holding-dollar text-slate-300 text-sm mt-1"></i>
-                            <span class="text-[10px] font-bold text-slate-300">Cash on Delivery</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="pt-2">
-                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-500 text-slate-950 font-extrabold text-sm hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
-                        Confirm & Complete Order <i class="fa-solid fa-check"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Order Receipt Confirmation Modal -->
-    <div id="receiptModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
-        <div class="glass-panel bg-slate-900/95 border border-emerald-500/40 rounded-3xl max-w-md w-full p-6 text-center relative shadow-2xl">
-            <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 text-2xl flex items-center justify-center mx-auto mb-4">
-                <i class="fa-solid fa-circle-check animate-bounce"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-1">Order Placed Successfully!</h3>
-            <p class="text-xs text-slate-400 font-mono mb-4" id="orderNumberDisplay">Order ID: #HC-84920</p>
-            
-            <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-left text-xs space-y-2 mb-6 font-mono">
-                <div class="flex justify-between text-slate-400">
-                    <span>Status:</span>
-                    <span class="text-emerald-400 font-bold">Processing Express</span>
-                </div>
-                <div class="flex justify-between text-slate-400">
-                    <span>Est. Delivery:</span>
-                    <span class="text-slate-200">2-3 Business Days</span>
-                </div>
-                <div class="flex justify-between text-slate-400 border-t border-slate-800 pt-2">
-                    <span>Paid Amount:</span>
-                    <span class="text-white font-bold" id="receiptTotalAmount">$0.00</span>
-                </div>
-            </div>
-
-            <button onclick="closeReceiptModal()" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition-all">
-                Return to Store
-            </button>
-        </div>
-    </div>
-
-    <!-- Toast Notification Widget -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 glass-panel px-4 py-3 rounded-2xl border border-emerald-500/40 text-xs font-bold text-slate-100 flex items-center gap-3 shadow-2xl hidden">
-        <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-        <span id="toastMessage">Item added to your cart</span>
-    </div>
-
-    <script>
-        /* Products Database */
-        const products = [
-            {
-                id: "prod-1",
-                title: "Pro-Grade EMT Trauma First Aid Bag",
-                category: "firstaid",
-                price: 129.99,
-                rating: 4.9,
-                reviews: 142,
-                image: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=600&q=80",
-                description: "Comprehensive first-responder medical bag containing clinical tourniquets, chest seals, pressure bandages, airway management tubes, and splints.",
-                contents: ["CAT Gen7 Tourniquet", "Israeli Pressure Bandages", "Chest Seal Pair", "Sterile Trauma Shears", "Nitrile Gloves x 6 Pairs"]
-            },
-            {
-                id: "prod-2",
-                title: "Vital 72-Hour Emergency Bug-Out Pack",
-                category: "survival",
-                price: 189.50,
-                rating: 4.8,
-                reviews: 98,
-                image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
-                description: "Complete 3-day family survival backpack equipped with 5-year shelf-life water rations, emergency food bars, solar hand-crank radio, and emergency thermal bivvies.",
-                contents: ["Water Rations (12 Packs)", "High Calorie Food Bars", "NOAA Weather Radio", "Mylar Thermal Blankets", "Water Purification Tablets"]
-            },
-            {
-                id: "prod-3",
-                title: "HealthCura Smart Body Composition Scale",
-                category: "diagnostic",
-                price: 59.99,
-                rating: 4.7,
-                reviews: 215,
-                image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80",
-                description: "High-precision bio-impedance Bluetooth digital scale that syncs metrics including BMI, body fat percentage, visceral fat, muscle mass, and bone density.",
-                contents: ["Smart Digital Scale", "AAA Batteries Included", "iOS/Android Sync App Access", "User Quick Manual"]
-            },
-            {
-                id: "prod-4",
-                title: "Omron Upper Arm Digital BP Monitor",
-                category: "diagnostic",
-                price: 79.95,
-                rating: 4.9,
-                reviews: 310,
-                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
-                description: "Clinically validated automatic blood pressure monitor featuring IntelliSense inflation tech, irregular heartbeat detection, and 2-user 100-reading memory storage.",
-                contents: ["Digital BP Monitor Unit", "Wide-Range Arm Cuff (9-17\")", "Storage Travel Case", "AC Adapter"]
-            },
-            {
-                id: "prod-5",
-                title: "Pro Fingertip Pulse Oximeter",
-                category: "diagnostic",
-                price: 29.99,
-                rating: 4.8,
-                reviews: 180,
-                image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
-                description: "Medical grade pulse oximeter for fast non-invasive SpO2 oxygen saturation level readings and pulse rate waveform display on crisp dual-color OLED screen.",
-                contents: ["Fingertip Pulse Oximeter", "Lanyard Strap", "2x AAA Batteries", "Protective Silicon Case"]
-            },
-            {
-                id: "prod-6",
-                title: "Non-Contact Infrared Medical Thermometer",
-                category: "diagnostic",
-                price: 34.50,
-                rating: 4.6,
-                reviews: 156,
-                image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=600&q=80",
-                description: "Instant 1-second forehead temperature scanner with color-coded backlights (Green/Yellow/Red) for quick fever alert indication without physical contact.",
-                contents: ["Infrared Scanner Unit", "User Manual", "Soft Storage Pouch"]
-            }
-        ];
-
-        /* Shopping Cart State */
-        let cart = [];
-        let appliedDiscount = 0;
-        let currentCategory = 'all';
-
-        /* Initialization */
-        window.addEventListener('DOMContentLoaded', () => {
-            initCanvasBg();
-            renderProducts();
-            updateCartUI();
-        });
-
-        /* Particle Background Physics */
-        function initCanvasBg() {
-            const canvas = document.getElementById('bg-canvas');
-            const ctx = canvas.getContext('2d');
-            let width, height, particles = [];
-
-            function resize() {
-                width = canvas.width = window.innerWidth;
-                height = canvas.height = window.innerHeight;
-            }
-            window.addEventListener('resize', resize);
-            resize();
-
-            for (let i = 0; i < 40; i++) {
-                particles.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    radius: Math.random() * 2 + 1,
-                    vx: (Math.random() - 0.5) * 0.3,
-                    vy: (Math.random() - 0.5) * 0.3,
-                    alpha: Math.random() * 0.5 + 0.1
-                });
-            }
-
-            function animate() {
-                ctx.clearRect(0, 0, width, height);
-                particles.forEach(p => {
-                    p.x += p.vx; p.y += p.vy;
-                    if (p.x < 0) p.x = width;
-                    if (p.x > width) p.x = 0;
-                    if (p.y < 0) p.y = height;
-                    if (p.y > height) p.y = 0;
-
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`;
-                    ctx.fill();
-                });
-                requestAnimationFrame(animate);
-            }
-            animate();
-        }
-
-        /* Render Catalog Grid */
-        function renderProducts(itemsToRender = products) {
-            const grid = document.getElementById('productGrid');
-            if (itemsToRender.length === 0) {
-                grid.innerHTML = `<div class="col-span-full py-12 text-center text-slate-500 font-mono text-xs">No products found matching your filter criteria.</div>`;
-                return;
-            }
-
-            grid.innerHTML = itemsToRender.map(prod => `
-                <div class="glass-panel glass-panel-hover rounded-2xl p-5 border flex flex-col justify-between group">
-                    <div>
-                        <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-slate-900">
-                            <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[10px] font-mono font-bold border border-emerald-500/30">
-                                <i class="fa-solid fa-star text-amber-400 text-[9px] mr-1"></i>${prod.rating} (${prod.reviews})
-                            </span>
-                        </div>
-
-                        <h3 class="text-base font-bold text-white mb-1.5 leading-snug">${prod.title}</h3>
-                        <p class="text-slate-400 text-xs line-clamp-2 leading-relaxed mb-4">${prod.description}</p>
-                    </div>
-
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <span class="text-[10px] uppercase font-mono text-slate-500 block">Unit Price</span>
-                                <span class="text-xl font-extrabold text-white font-mono">$${prod.price.toFixed(2)}</span>
-                            </div>
-                            <button onclick="openQuickView('${prod.id}')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold transition-all">
-                                Quick View
-                            </button>
-                        </div>
-
-                        <button onclick="addToCart('${prod.id}')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 font-extrabold text-xs transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-cart-plus"></i> Add To Cart
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        /* Category Filtering & Search */
-        function setCategory(cat) {
-            currentCategory = cat;
-            document.querySelectorAll('.cat-tab').forEach(btn => {
-                btn.classList.remove('bg-emerald-500', 'text-slate-950');
-                btn.classList.add('glass-panel', 'text-slate-300');
-            });
-            event.target.classList.add('bg-emerald-500', 'text-slate-950');
-            event.target.classList.remove('glass-panel', 'text-slate-300');
-
-            filterProducts();
-        }
-
-        function filterProducts() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            let filtered = products.filter(p => {
-                const matchesCat = currentCategory === 'all' || p.category === currentCategory;
-                const matchesSearch = p.title.toLowerCase().includes(query) || p.description.toLowerCase().includes(query);
-                return matchesCat && matchesSearch;
-            });
-            renderProducts(filtered);
-        }
-
-        function sortProducts() {
-            const val = document.getElementById('sortSelect').value;
-            let sorted = [...products];
-
-            if (val === 'low') sorted.sort((a,b) => a.price - b.price);
-            if (val === 'high') sorted.sort((a,b) => b.price - a.price);
-            if (val === 'rating') sorted.sort((a,b) => b.rating - a.rating);
-
-            renderProducts(sorted);
-        }
-
-        /* Cart Logic */
-        function addToCart(prodId) {
-            const prod = products.find(p => p.id === prodId);
-            const existing = cart.find(item => item.id === prodId);
-
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ ...prod, qty: 1 });
-            }
-
-            updateCartUI();
-            showToast(`Added ${prod.title} to cart`);
-        }
-
-        function updateCartQty(prodId, delta) {
-            const item = cart.find(i => i.id === prodId);
-            if (!item) return;
-
-            item.qty += delta;
-            if (item.qty <= 0) {
-                cart = cart.filter(i => i.id !== prodId);
-            }
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const countEl = document.getElementById('cartBadgeCount');
-            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-            countEl.textContent = totalCount;
-
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            const discountAmount = subtotal * appliedDiscount;
-            const grandTotal = subtotal - discountAmount;
-
-            document.getElementById('cartHeaderTotal').textContent = `$${grandTotal.toFixed(2)}`;
-            document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)}`;
-            document.getElementById('cartDiscount').textContent = `-$${discountAmount.toFixed(2)}`;
-            document.getElementById('cartGrandTotal').textContent = `$${grandTotal.toFixed(2)}`;
-
-            const itemsContainer = document.getElementById('cartItemsContainer');
-            if (cart.length === 0) {
-                itemsContainer.innerHTML = `<div class="py-12 text-center text-slate-500 font-mono text-xs">Your shopping cart is currently empty.</div>`;
-                return;
-            }
-
-            itemsContainer.innerHTML = cart.map(item => `
-                <div class="glass-panel p-3.5 rounded-xl border border-slate-800 flex items-center justify-between gap-3">
-                    <img src="${item.image}" class="w-12 h-12 rounded-lg object-cover bg-slate-950">
-                    <div class="flex-1 min-w-0">
-                        <div class="text-xs font-bold text-white truncate">${item.title}</div>
-                        <div class="text-[10px] text-slate-400 font-mono mt-0.5">$${item.price.toFixed(2)} each</div>
-                    </div>
-                    <div class="flex items-center gap-2 bg-slate-950 px-2 py-1 rounded-lg border border-slate-800">
-                        <button onclick="updateCartQty('${item.id}', -1)" class="text-slate-400 hover:text-white text-xs font-bold">-</button>
-                        <span class="text-xs font-mono font-bold text-emerald-400 w-4 text-center">${item.qty}</span>
-                        <button onclick="updateCartQty('${item.id}', 1)" class="text-slate-400 hover:text-white text-xs font-bold">+</button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function applyPromoCode() {
-            const code = document.getElementById('promoInput').value.trim().toUpperCase();
-            if (code === 'HEALTH10') {
-                appliedDiscount = 0.10;
-                showToast("10% Discount Applied!");
-            } else {
-                appliedDiscount = 0;
-                showToast("Invalid Promo Code");
-            }
-            updateCartUI();
-        }
-
-        function toggleCartDrawer() {
-            const drawer = document.getElementById('cartDrawer');
-            drawer.classList.toggle('hidden');
-        }
-
-        /* Quick View Modal */
-        function openQuickView(prodId) {
-            const prod = products.find(p => p.id === prodId);
-            const modal = document.getElementById('quickViewModal');
-            const content = document.getElementById('quickViewContent');
-
-            content.innerHTML = `
-                <button onclick="closeQuickView()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <img src="${prod.image}" class="w-full h-56 md:h-full object-cover rounded-2xl bg-slate-950">
-                    <div class="space-y-4">
-                        <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/20">Verified Stock</span>
-                        <h3 class="text-2xl font-bold text-white">${prod.title}</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">${prod.description}</p>
-                        <div>
-                            <span class="text-[10px] uppercase font-mono text-slate-500 block mb-1">Package Contents:</span>
-                            <ul class="space-y-1">
-                                ${prod.contents.map(c => `<li class="text-xs text-slate-300 flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> ${c}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <div class="pt-2 flex items-center justify-between">
-                            <span class="text-2xl font-extrabold text-white font-mono">$${prod.price.toFixed(2)}</span>
-                            <button onclick="addToCart('${prod.id}'); closeQuickView();" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all">
-                                Add To Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            modal.classList.remove('hidden');
-            setTimeout(() => modal.classList.remove('opacity-0'), 10);
-        }
-
-        function closeQuickView() {
-            const modal = document.getElementById('quickViewModal');
-            modal.classList.add('opacity-0');
-            setTimeout(() => modal.classList.add('hidden'), 300);
-        }
-
-        /* Checkout Modal */
-        function openCheckoutModal() {
-            if (cart.length === 0) {
-                showToast("Cart is empty!");
-                return;
-            }
-            toggleCartDrawer();
-            const modal = document.getElementById('checkoutModal');
-            modal.classList.remove('hidden');
-            setTimeout(() => modal.classList.remove('opacity-0'), 10);
-        }
-
-        function closeCheckoutModal() {
-            const modal = document.getElementById('checkoutModal');
-            modal.classList.add('opacity-0');
-            setTimeout(() => modal.classList.add('hidden'), 300);
-        }
-
-        function handlePlaceOrder(e) {
-            e.preventDefault();
-            closeCheckoutModal();
-
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            const total = subtotal - (subtotal * appliedDiscount);
-
-            document.getElementById('receiptTotalAmount').textContent = `$${total.toFixed(2)}`;
-            document.getElementById('orderNumberDisplay').textContent = `Order ID: #HC-${Math.floor(10000 + Math.random() * 90000)}`;
-
-            const receiptModal = document.getElementById('receiptModal');
-            receiptModal.classList.remove('hidden');
-            setTimeout(() => receiptModal.classList.remove('opacity-0'), 10);
-
-            // Clear cart state
-            cart = [];
-            appliedDiscount = 0;
-            updateCartUI();
-        }
-
-        function closeReceiptModal() {
-            const modal = document.getElementById('receiptModal');
-            modal.classList.add('opacity-0');
-            setTimeout(() => modal.classList.add('hidden'), 300);
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastMessage').textContent = msg;
-            toast.classList.remove('hidden');
-            toast.classList.add('toast-animate');
-            setTimeout(() => {
-                toast.classList.add('hidden');
-            }, 3000);
-        }
-    </script>
-</body>
-</html>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="logo">BSV</span><span>BIG SMALL VENTURES<small>INTERNATIONAL</small></span></a>
+  <button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+  <nav class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#suppliers">For Suppliers</a><a href="#contact">Contact</a></nav>
+  <a class="navbtn" href="#contact">Request Manpower</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-inner">
+  <div class="eyebrow">Manpower sourcing • Workforce solutions</div>
+  <h1>The right people.<br>For every business.</h1>
+  <p>BSV International connects companies with dependable manpower supply partners to help meet workforce requirements efficiently and professionally.</p>
+  <a class="btn" href="#contact">Request Manpower</a><a class="btn-outline" href="#services">Explore Our Services</a>
+</div></section>
+<div class="wrap trust">
+  <div><strong>Reliable Connections</strong><span>Access to a network of manpower suppliers</span></div>
+  <div><strong>Multiple Industries</strong><span>Workforce sourcing for varied business needs</span></div>
+  <div><strong>Business-Focused</strong><span>Clear communication from enquiry to coordination</span></div>
+</div>
+<section id="services"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">What we do</div><h2>Manpower solutions for your business</h2><p>Tell us the roles, quantity and project requirements. We coordinate with suitable supply partners to identify potential workforce options.</p></div>
+  <div class="cards">
+    <article class="card"><div class="symbol">⚒</div><h3>Construction & Contracting</h3><p>Support for project-based workforce requirements, including skilled and general labour categories.</p></article>
+    <article class="card"><div class="symbol">⚙</div><h3>Industrial & Manufacturing</h3><p>Manpower sourcing coordination for factories, workshops, warehouses and industrial operations.</p></article>
+    <article class="card"><div class="symbol">🔧</div><h3>Technical & Maintenance</h3><p>Connect with suppliers for technical, maintenance and facility-support workforce needs.</p></article>
+    <article class="card"><div class="symbol">✦</div><h3>Hospitality & Services</h3><p>Workforce enquiries for hospitality, cleaning, housekeeping and service operations.</p></article>
+    <article class="card"><div class="symbol">▤</div><h3>Warehouse & Logistics</h3><p>Coordinate sourcing for packing, loading, helpers and warehouse support roles.</p></article>
+    <article class="card"><div class="symbol">＋</div><h3>Custom Requirements</h3><p>Have a specific role or project? Share your requirement and we will review suitable sourcing options.</p></article>
+  </div>
+</div></section>
+<section class="about" id="about"><div class="wrap about-grid">
+  <div class="about-image" role="img" aria-label="Industrial workforce collaborating"></div>
+  <div><div class="eyebrow">About BSV International</div><h2>Your workforce connection partner.</h2><p>Big Small Ventures International (BSV) is being built as a manpower sourcing and business coordination partner. We work to connect companies seeking workers with established manpower suppliers who may be able to fulfil their requirements.</p><ul class="checks"><li>One point of contact for manpower enquiries</li><li>Supplier-network coordination</li><li>Requirements gathered clearly and professionally</li><li>Focus on suitable matches and long-term business relationships</li></ul></div>
+</div></section>
+<section id="suppliers"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">Partner with us</div><h2>Are you a manpower supplier?</h2><p>We welcome enquiries from established manpower suppliers interested in receiving suitable business requirements and exploring cooperation with BSV International.</p></div>
+  <div class="cards">
+    <article class="card"><div class="symbol">01</div><h3>Share your profile</h3><p>Tell us your company details, worker categories and service locations.</p></article>
+    <article class="card"><div class="symbol">02</div><h3>Discuss requirements</h3><p>We can discuss relevant client enquiries, availability and commercial terms.</p></article>
+    <article class="card"><div class="symbol">03</div><h3>Coordinate professionally</h3><p>Work together with clear communication, documentation and agreed responsibilities.</p></article>
+  </div>
+</div></section>
+<section class="cta"><div class="wrap"><h2>Looking for dependable manpower?</h2><p>Send BSV International your workforce requirement. Include the job category, number of workers, location and expected start date.</p><a class="btn" href="#contact">Send Your Requirement</a></div></section>
+<section class="contact" id="contact"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's discuss your requirement</h2><p>Use the form to prepare an enquiry. Add your official contact details before publishing the website.</p></div>
+  <div class="contact-grid">
+    <div class="contact-info"><h3>BSV International</h3><p><strong>Big Small Ventures International</strong><br>Manpower sourcing & workforce coordination</p><p>Email: <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p><p>Phone / WhatsApp: <a href="tel:+966500000000">+966 5X XXX XXXX</a></p><p>Location: Saudi Arabia</p><p style="font-size:12px">Replace the sample email and phone number with your official business contacts.</p></div>
+    <form id="enquiryForm">
+      <div class="field"><label for="kind">I am a</label><select id="kind" required><option value="">Choose one</option><option>Company looking for manpower</option><option>Manpower supplier</option><option>Other business enquiry</option></select></div>
+      <div class="field"><label for="name">Your name / company name</label><input id="name" required placeholder="Enter your name or company"></div>
+      <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" required placeholder="+966 ..."></div>
+      <div class="field"><label for="email">Email (optional)</label><input id="email" type="email" placeholder="name@company.com"></div>
+      <div class="field"><label for="details">Requirement / message</label><textarea id="details" required placeholder="Job category, number of workers, location, start date, or supplier capabilities"></textarea></div>
+      <button class="btn" type="submit">Prepare Enquiry</button>
+      <p class="form-note" id="formNote">This demo form opens an email draft; it does not store or send information on a server.</p>
+    </form>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>BSV INTERNATIONAL</strong><br>Big Small Ventures International</div><div>© <span id="year"></span> BSV International. All rights reserved.</div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const v=id=>document.getElementById(id).value.trim();
+ const subject=encodeURIComponent('BSV Website Enquiry - '+v('kind'));
+ const body=encodeURIComponent('Enquiry type: '+v('kind')+'\\nName / Company: '+v('name')+'\\nPhone: '+v('phone')+'\\nEmail: '+v('email')+'\\n\\nDetails:\\n'+v('details'));
+ window.location.href='mailto:YOUR_EMAIL@example.com?subject='+subject+'&body='+body;
+ document.getElementById('formNote').textContent='Your email app should open with the enquiry prepared. Replace YOUR_EMAIL@example.com in the website code with your real email address.';
+});
+</script>
+</body></html>
