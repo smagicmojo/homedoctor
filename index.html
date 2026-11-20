@@ -1,92 +1,1603 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BSV International connects businesses with dependable manpower and workforce supply partners.">
-<title>BSV International | Manpower Solutions</title>
-<style>
-:root{--navy:#10243b;--blue:#173e63;--gold:#d6a84f;--ink:#182536;--muted:#667487;--light:#f4f7fa;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1140px,92%);margin:auto}
-header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #ffffff20}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}.logo{width:46px;height:46px;border:2px solid var(--gold);border-radius:10px;display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:17px}.brand small{display:block;font-size:10px;letter-spacing:2px;color:#c6d1dd;font-weight:600}.links{display:flex;gap:26px;align-items:center;font-size:14px;color:#e8edf3}.links a:hover{color:var(--gold)}.navbtn,.btn{display:inline-block;background:var(--gold);color:#17283a;padding:12px 19px;border-radius:6px;font-weight:800;font-size:14px;border:0;cursor:pointer}.menu{display:none;background:none;color:white;border:0;font-size:26px}
-.hero{background:linear-gradient(110deg,rgba(9,25,43,.96),rgba(15,47,76,.83)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1900&q=85') center/cover;color:white;padding:105px 0 100px}.hero-inner{max-width:720px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.08;margin:17px 0}.hero p{font-size:18px;color:#dce5ed;max-width:620px;margin:0 0 28px}.btn-outline{display:inline-block;border:1px solid #ffffff80;color:#fff;padding:11px 18px;border-radius:6px;margin-left:10px;font-weight:700;font-size:14px}.trust{background:#fff;box-shadow:0 8px 30px #142b4212;position:relative;margin-top:-30px;border-radius:10px;padding:23px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.trust strong{display:block;color:var(--navy);font-size:16px}.trust span{font-size:13px;color:var(--muted)}
-section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 40px}.section-head h2{font-size:34px;color:var(--navy);margin:8px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid #e5eaf0;border-radius:10px;padding:27px;background:#fff;box-shadow:0 8px 24px #10243b08}.card .symbol{width:48px;height:48px;border-radius:9px;background:#f7f0e2;color:#9b7229;display:grid;place-items:center;font-size:22px}.card h3{color:var(--navy);margin:17px 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}.about{background:var(--light)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-image{min-height:390px;border-radius:12px;background:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1100&q=85') center/cover}.about h2{font-size:36px;color:var(--navy);line-height:1.15}.about p{color:var(--muted)}.checks{padding:0;list-style:none}.checks li{margin:12px 0}.checks li:before{content:'✓';color:#b18435;font-weight:900;margin-right:10px}
-.process{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step{border-left:3px solid var(--gold);padding:5px 0 5px 18px}.step b{font-size:12px;color:#a47a32;letter-spacing:1px}.step h3{margin:5px 0;color:var(--navy)}.step p{font-size:14px;color:var(--muted);margin:0}
-.cta{background:var(--navy);color:#fff;text-align:center;padding:66px 0}.cta h2{font-size:34px;margin:0 0 10px}.cta p{color:#d5deea;margin:0 auto 24px;max-width:650px}
-.contact{background:var(--light)}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}.contact-info{background:var(--navy);color:#fff;padding:30px;border-radius:10px}.contact-info p{color:#d5deea}.contact-info a{color:var(--gold)}form{background:#fff;padding:30px;border-radius:10px;box-shadow:0 8px 24px #10243b0b}.field{margin-bottom:15px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--navy)}input,select,textarea{width:100%;padding:12px;border:1px solid #dce3eb;border-radius:6px;font:inherit;font-size:14px}textarea{min-height:110px;resize:vertical}.form-note{font-size:12px;color:var(--muted);margin-top:12px}
-footer{background:#0a1929;color:#c5d0dc;padding:28px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:white}
-@media(max-width:760px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:20px;flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.navbtn{display:none}.hero{padding:75px 0}.trust,.cards,.about-grid,.process,.contact-grid{grid-template-columns:1fr}.trust{margin-top:-18px}.about-image{min-height:260px}section{padding:62px 0}.section-head h2,.about h2{font-size:29px}.btn-outline{margin:12px 0 0}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Color Pool Web3 dApp - Trust Wallet & 5% Creator Protocol</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ethers.js v6 CDN for real ABI encoding, Contract reads & Trust Wallet transactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.4/ethers.umd.min.js"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        obsidian: {
+                            950: '#05070E',
+                            900: '#0A0E1A',
+                            800: '#111729',
+                            700: '#1A233D',
+                        },
+                        trust: {
+                            blue: '#3375BB',
+                            vivid: '#0500FF',
+                        }
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-in': 'bounceIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+                    },
+                    keyframes: {
+                        bounceIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.88)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #05070E;
+            color: #F8FAFC;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .glass-card {
+            background: linear-gradient(155deg, rgba(17, 23, 41, 0.94), rgba(10, 14, 26, 0.97));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.8);
+        }
+
+        .trust-btn {
+            background: linear-gradient(135deg, #0500FF 0%, #3375BB 100%);
+            box-shadow: 0 4px 16px rgba(5, 0, 255, 0.35);
+            transition: all 0.15s ease;
+        }
+        .trust-btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-green {
+            background: linear-gradient(180deg, #10B981 0%, #059669 100%);
+            box-shadow: 0 5px 0 #065F46, 0 10px 20px rgba(16, 185, 129, 0.28);
+            transition: all 0.12s ease;
+        }
+        .btn-green:active:not(:disabled) {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #065F46, 0 4px 10px rgba(16, 185, 129, 0.2);
+        }
+
+        .btn-violet {
+            background: linear-gradient(180deg, #8B5CF6 0%, #7C3AED 100%);
+            box-shadow: 0 5px 0 #4C1D95, 0 10px 20px rgba(139, 92, 246, 0.28);
+            transition: all 0.12s ease;
+        }
+        .btn-violet:active:not(:disabled) {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #4C1D95, 0 4px 10px rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-red {
+            background: linear-gradient(180deg, #EF4444 0%, #DC2626 100%);
+            box-shadow: 0 5px 0 #7F1D1D, 0 10px 20px rgba(239, 68, 68, 0.28);
+            transition: all 0.12s ease;
+        }
+        .btn-red:active:not(:disabled) {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #7F1D1D, 0 4px 10px rgba(239, 68, 68, 0.2);
+        }
+
+        .btn-disabled {
+            opacity: 0.45;
+            filter: grayscale(65%);
+            cursor: not-allowed;
+        }
+
+        .timer-urgent {
+            color: #F87171;
+            text-shadow: 0 0 16px rgba(239, 68, 68, 0.65);
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0E1A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1A233D;
+            border-radius: 9999px;
+        }
+    </style>
 </head>
-<body>
-<header><div class="wrap nav">
-  <a class="brand" href="#home"><span class="logo">BSV</span><span>BIG SMALL VENTURES<small>INTERNATIONAL</small></span></a>
-  <button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-  <nav class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#suppliers">For Suppliers</a><a href="#contact">Contact</a></nav>
-  <a class="navbtn" href="#contact">Request Manpower</a>
-</div></header>
-<main>
-<section class="hero" id="home"><div class="wrap hero-inner">
-  <div class="eyebrow">Manpower sourcing • Workforce solutions</div>
-  <h1>The right people.<br>For every business.</h1>
-  <p>BSV International connects companies with dependable manpower supply partners to help meet workforce requirements efficiently and professionally.</p>
-  <a class="btn" href="#contact">Request Manpower</a><a class="btn-outline" href="#services">Explore Our Services</a>
-</div></section>
-<div class="wrap trust">
-  <div><strong>Reliable Connections</strong><span>Access to a network of manpower suppliers</span></div>
-  <div><strong>Multiple Industries</strong><span>Workforce sourcing for varied business needs</span></div>
-  <div><strong>Business-Focused</strong><span>Clear communication from enquiry to coordination</span></div>
-</div>
-<section id="services"><div class="wrap">
-  <div class="section-head"><div class="eyebrow">What we do</div><h2>Manpower solutions for your business</h2><p>Tell us the roles, quantity and project requirements. We coordinate with suitable supply partners to identify potential workforce options.</p></div>
-  <div class="cards">
-    <article class="card"><div class="symbol">⚒</div><h3>Construction & Contracting</h3><p>Support for project-based workforce requirements, including skilled and general labour categories.</p></article>
-    <article class="card"><div class="symbol">⚙</div><h3>Industrial & Manufacturing</h3><p>Manpower sourcing coordination for factories, workshops, warehouses and industrial operations.</p></article>
-    <article class="card"><div class="symbol">🔧</div><h3>Technical & Maintenance</h3><p>Connect with suppliers for technical, maintenance and facility-support workforce needs.</p></article>
-    <article class="card"><div class="symbol">✦</div><h3>Hospitality & Services</h3><p>Workforce enquiries for hospitality, cleaning, housekeeping and service operations.</p></article>
-    <article class="card"><div class="symbol">▤</div><h3>Warehouse & Logistics</h3><p>Coordinate sourcing for packing, loading, helpers and warehouse support roles.</p></article>
-    <article class="card"><div class="symbol">＋</div><h3>Custom Requirements</h3><p>Have a specific role or project? Share your requirement and we will review suitable sourcing options.</p></article>
-  </div>
-</div></section>
-<section class="about" id="about"><div class="wrap about-grid">
-  <div class="about-image" role="img" aria-label="Industrial workforce collaborating"></div>
-  <div><div class="eyebrow">About BSV International</div><h2>Your workforce connection partner.</h2><p>Big Small Ventures International (BSV) is being built as a manpower sourcing and business coordination partner. We work to connect companies seeking workers with established manpower suppliers who may be able to fulfil their requirements.</p><ul class="checks"><li>One point of contact for manpower enquiries</li><li>Supplier-network coordination</li><li>Requirements gathered clearly and professionally</li><li>Focus on suitable matches and long-term business relationships</li></ul></div>
-</div></section>
-<section id="suppliers"><div class="wrap">
-  <div class="section-head"><div class="eyebrow">Partner with us</div><h2>Are you a manpower supplier?</h2><p>We welcome enquiries from established manpower suppliers interested in receiving suitable business requirements and exploring cooperation with BSV International.</p></div>
-  <div class="cards">
-    <article class="card"><div class="symbol">01</div><h3>Share your profile</h3><p>Tell us your company details, worker categories and service locations.</p></article>
-    <article class="card"><div class="symbol">02</div><h3>Discuss requirements</h3><p>We can discuss relevant client enquiries, availability and commercial terms.</p></article>
-    <article class="card"><div class="symbol">03</div><h3>Coordinate professionally</h3><p>Work together with clear communication, documentation and agreed responsibilities.</p></article>
-  </div>
-</div></section>
-<section class="cta"><div class="wrap"><h2>Looking for dependable manpower?</h2><p>Send BSV International your workforce requirement. Include the job category, number of workers, location and expected start date.</p><a class="btn" href="#contact">Send Your Requirement</a></div></section>
-<section class="contact" id="contact"><div class="wrap">
-  <div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's discuss your requirement</h2><p>Use the form to prepare an enquiry. Add your official contact details before publishing the website.</p></div>
-  <div class="contact-grid">
-    <div class="contact-info"><h3>BSV International</h3><p><strong>Big Small Ventures International</strong><br>Manpower sourcing & workforce coordination</p><p>Email: <a href="mailto:salihcmd@gmail.com">salihcmd@gmail.com</a></p><p>Phone / WhatsApp: <a href="tel:+966556915810">+966 556915810</a></p><p>Location: Saudi Arabia</p><p style="font-size:12px">Replace the sample email and phone number with your official business contacts.</p></div>
-    <form id="enquiryForm">
-      <div class="field"><label for="kind">I am a</label><select id="kind" required><option value="">Choose one</option><option>Company looking for manpower</option><option>Manpower supplier</option><option>Other business enquiry</option></select></div>
-      <div class="field"><label for="name">Your name / company name</label><input id="name" required placeholder="Enter your name or company"></div>
-      <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" required placeholder="+966 ..."></div>
-      <div class="field"><label for="email">Email (optional)</label><input id="email" type="email" placeholder="name@company.com"></div>
-      <div class="field"><label for="details">Requirement / message</label><textarea id="details" required placeholder="Job category, number of workers, location, start date, or supplier capabilities"></textarea></div>
-      <button class="btn" type="submit">Prepare Enquiry</button>
-      <p class="form-note" id="formNote">This demo form opens an email draft; it does not store or send information on a server.</p>
-    </form>
-  </div>
-</div></section>
-</main>
-<footer><div class="wrap foot"><div><strong>BSV INTERNATIONAL</strong><br>Big Small Ventures International</div><div>© <span id="year"></span> BSV International. All rights reserved.</div></div></footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('enquiryForm').addEventListener('submit',function(e){
- e.preventDefault();
- const v=id=>document.getElementById(id).value.trim();
- const subject=encodeURIComponent('BSV Website Enquiry - '+v('kind'));
- const body=encodeURIComponent('Enquiry type: '+v('kind')+'\\nName / Company: '+v('name')+'\\nPhone: '+v('phone')+'\\nEmail: '+v('email')+'\\n\\nDetails:\\n'+v('details'));
- window.location.href='mailto:salihcmd@gmail.com?subject='+subject+'&body='+body;
- document.getElementById('formNote').textContent='Your email app should open with the enquiry prepared. Replace Ysalihcmd@gmail.com in the website code with your real email address.';
-});
-</script>
-</body></html>
+<body class="min-h-screen flex flex-col items-center justify-start pb-12">
+
+    <!-- Mobile Web3 dApp Container -->
+    <div class="w-full max-w-md px-3.5 pt-3 flex flex-col gap-3">
+
+        <!-- Top Web3 Header -->
+        <header class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0500FF] to-[#3375BB] flex items-center justify-center shadow-lg shadow-blue-600/30 border border-blue-400/30">
+                    <i class="fa-solid fa-shield-halved text-white text-base"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm font-extrabold tracking-tight text-white leading-none">COLOR POOL <span class="text-blue-400">WEB3</span></h1>
+                    <div class="flex items-center gap-1.5 mt-1">
+                        <span id="networkDot" class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span id="networkBadgeText" class="text-[10px] font-mono font-semibold text-slate-400">Simulator Mode</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-1.5">
+                <!-- Creator & Contract Config Drawer Button -->
+                <button id="openCreatorDrawerBtn" class="px-2.5 h-8 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 border border-blue-500/30 flex items-center gap-1 text-[11px] font-bold text-blue-300 active:scale-95 transition">
+                    <i class="fa-solid fa-code text-[10px]"></i>
+                    <span>Creator</span>
+                </button>
+
+                <!-- Fast Forward -15s (Simulator Helper) -->
+                <button id="fastForwardBtn" title="Fast-forward 15s in simulator" class="px-2 h-8 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 border border-white/10 text-[10px] font-mono font-bold text-slate-300 active:scale-95 transition">
+                    -15s
+                </button>
+
+                <!-- Connect Trust Wallet Button -->
+                <button id="connectWalletBtn" class="trust-btn px-3 h-8 rounded-xl text-white font-bold text-xs flex items-center gap-1.5 border border-blue-400/30">
+                    <i class="fa-solid fa-wallet text-[11px]"></i>
+                    <span id="connectBtnLabel">Connect Trust</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Trust Wallet Deep-Link Prompt Banner -->
+        <section id="trustBrowserBanner" class="glass-card rounded-2xl p-3 border border-blue-500/30 bg-gradient-to-r from-blue-950/55 to-obsidian-900">
+            <div class="flex items-center justify-between gap-2.5">
+                <div class="flex-1">
+                    <p class="text-xs font-bold text-white flex items-center gap-1.5">
+                        <i class="fa-solid fa-mobile-screen-button text-blue-400"></i>
+                        Open in Trust Wallet Browser
+                    </p>
+                    <p class="text-[10px] text-slate-300 mt-0.5 leading-snug">
+                        Tap <strong>Open App</strong> to launch inside Trust Wallet's Web3 browser for BSC Testnet / Mainnet signing.
+                    </p>
+                </div>
+                <a id="trustDeepLinkBtn" href="#" class="shrink-0 trust-btn px-3 py-2 rounded-xl text-[11px] font-extrabold text-white flex items-center gap-1.5">
+                    <span>Open App</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Wallet Balance, Network Switcher & Creator Profit Badge -->
+        <section class="glass-card rounded-2xl p-4 relative overflow-hidden">
+            <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-blue-500/10 blur-2xl pointer-events-none"></div>
+            <div class="flex items-start justify-between gap-2">
+                <div>
+                    <div class="flex flex-wrap items-center gap-1.5">
+                        <span id="walletModeTag" class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                            Local Web3 Simulator
+                        </span>
+                        <span id="contractModeTag" class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-md bg-obsidian-800 text-slate-300 border border-white/10">
+                            No Contract Set
+                        </span>
+                    </div>
+
+                    <div class="flex items-baseline gap-1.5 mt-2">
+                        <span id="walletBalance" class="font-mono text-3xl font-extrabold text-white tracking-tight">0.2500</span>
+                        <span id="currencySymbol" class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded-md">tBNB</span>
+                        <span id="walletUsdApprox" class="text-xs font-mono text-slate-400">($150.00)</span>
+                    </div>
+                    <p id="walletAddressSubtext" class="text-[10px] font-mono text-slate-400 mt-0.5">
+                        Sandbox Wallet • 1 BNB ≈ $600 USD
+                    </p>
+                </div>
+
+                <!-- Network & Faucet Controls -->
+                <div class="flex flex-col gap-1.5 items-end">
+                    <button id="topUpOrDisconnectBtn" class="px-2.5 py-1.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 border border-white/15 text-white font-bold text-[11px] active:scale-95 transition flex items-center gap-1">
+                        <i class="fa-solid fa-plus text-emerald-400 text-[10px]"></i>
+                        <span id="topUpBtnLabel">+0.25 tBNB</span>
+                    </button>
+
+                    <div id="chainSwitchRow" class="flex items-center gap-1">
+                        <button onclick="switchChain('0x61')" title="Switch to BSC Testnet (97)" class="px-2 py-1 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/30 text-amber-300 font-mono font-bold text-[9px] transition">
+                            Testnet
+                        </button>
+                        <button onclick="switchChain('0x38')" title="Switch to BSC Mainnet (56)" class="px-2 py-1 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 font-mono font-bold text-[9px] transition">
+                            Mainnet
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creator 5% Revenue Strip -->
+            <div class="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between text-[11px]">
+                <span class="text-slate-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-sack-dollar text-amber-400"></i>
+                    <span>Creator Profit Earned (5%):</span>
+                </span>
+                <button id="quickOpenCreatorStats" class="font-mono font-extrabold text-amber-400 hover:text-amber-300 underline decoration-dotted">
+                    <span id="headerCreatorEarnings">0.0000 tBNB</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Round Epoch, 2-Minute Countdown & Transparent 5% / 95% Pool Split -->
+        <section class="glass-card rounded-2xl p-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-400 block">Round Epoch ID</span>
+                    <div class="flex items-center gap-1.5 mt-0.5">
+                        <i class="fa-solid fa-cube text-blue-400 text-xs"></i>
+                        <span id="periodId" class="font-mono text-base font-bold text-white">#1001</span>
+                    </div>
+                    <span id="roundStatusBadge" class="inline-flex items-center gap-1.5 mt-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> POOL OPEN
+                    </span>
+                </div>
+
+                <div class="text-right">
+                    <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-400 block">2-Min Timer</span>
+                    <div id="countdownDisplay" class="font-mono text-4xl font-extrabold text-white tracking-wider mt-0.5">
+                        02:00
+                    </div>
+                    <span class="text-[10px] text-slate-400">Escrow locks at 00:10</span>
+                </div>
+            </div>
+
+            <!-- Transparent 5% Creator / 95% Winners Pool Split Card -->
+            <div class="mt-3.5 p-2.5 rounded-xl bg-obsidian-950/85 border border-white/10 grid grid-cols-3 gap-2 text-center">
+                <div>
+                    <span class="text-[9px] uppercase tracking-wider text-slate-400 block">Total Pool</span>
+                    <span id="splitTotalPool" class="font-mono text-xs font-extrabold text-white">0.0000</span>
+                    <span id="splitTotalUsd" class="font-mono text-[9px] text-slate-400 block">$0.00</span>
+                </div>
+                <div class="border-x border-white/10 px-1">
+                    <span class="text-[9px] uppercase tracking-wider text-amber-400 font-bold block">Creator (5%)</span>
+                    <span id="splitCreatorFee" class="font-mono text-xs font-extrabold text-amber-400">0.0000</span>
+                    <span id="splitCreatorUsd" class="font-mono text-[9px] text-amber-300/80 block">$0.00</span>
+                </div>
+                <div>
+                    <span class="text-[9px] uppercase tracking-wider text-emerald-400 font-bold block">Winners (95%)</span>
+                    <span id="splitWinnersPool" class="font-mono text-xs font-extrabold text-emerald-400">0.0000</span>
+                    <span id="splitWinnersUsd" class="font-mono text-[9px] text-emerald-300/80 block">$0.00</span>
+                </div>
+            </div>
+
+            <!-- Live Color Liquidity Bars -->
+            <div class="mt-3.5 pt-3 border-t border-white/10 space-y-2">
+                <!-- Emerald Green Pool -->
+                <div>
+                    <div class="flex justify-between text-[11px] font-mono mb-0.5">
+                        <span class="text-emerald-400 font-bold">0 • EMERALD GREEN</span>
+                        <span id="greenPoolText" class="text-slate-200 font-semibold">0.0000 (33%)</span>
+                    </div>
+                    <div class="w-full h-2 bg-obsidian-950 rounded-full overflow-hidden p-0.5">
+                        <div id="greenPoolBar" class="h-full bg-emerald-500 rounded-full transition-all duration-500" style="width: 33%"></div>
+                    </div>
+                </div>
+
+                <!-- Royal Violet Pool -->
+                <div>
+                    <div class="flex justify-between text-[11px] font-mono mb-0.5">
+                        <span class="text-violet-400 font-bold">1 • ROYAL VIOLET</span>
+                        <span id="violetPoolText" class="text-slate-200 font-semibold">0.0000 (33%)</span>
+                    </div>
+                    <div class="w-full h-2 bg-obsidian-950 rounded-full overflow-hidden p-0.5">
+                        <div id="violetPoolBar" class="h-full bg-violet-500 rounded-full transition-all duration-500" style="width: 33%"></div>
+                    </div>
+                </div>
+
+                <!-- Crimson Red Pool -->
+                <div>
+                    <div class="flex justify-between text-[11px] font-mono mb-0.5">
+                        <span class="text-rose-400 font-bold">2 • CRIMSON RED</span>
+                        <span id="redPoolText" class="text-slate-200 font-semibold">0.0000 (33%)</span>
+                    </div>
+                    <div class="w-full h-2 bg-obsidian-950 rounded-full overflow-hidden p-0.5">
+                        <div id="redPoolBar" class="h-full bg-rose-500 rounded-full transition-all duration-500" style="width: 33%"></div>
+                    </div>
+                </div>
+
+                <div id="poolLeaderHint" class="text-[11px] text-center pt-1 font-medium text-slate-400">
+                    Lowest staked pool wins 95% prize pool • Most staked fails
+                </div>
+            </div>
+        </section>
+
+        <!-- Stake & Color Selection Card -->
+        <section class="glass-card rounded-2xl p-4 relative">
+            <!-- Lock Overlay during final 10 seconds -->
+            <div id="lockOverlay" class="hidden absolute inset-0 z-20 rounded-2xl bg-obsidian-950/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 text-center border border-rose-500/30">
+                <div class="w-12 h-12 rounded-full bg-rose-500/20 border border-rose-500/40 flex items-center justify-center text-rose-400 text-xl mb-2 animate-bounce">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="text-base font-extrabold text-white">ESCROW LOCKED</h3>
+                <p class="text-xs text-slate-300 mt-0.5">Settling lowest pool & sending 5% to Creator...</p>
+                <button id="manualSettleBtn" class="hidden mt-3 px-4 py-2 rounded-xl trust-btn text-white text-xs font-extrabold">
+                    Trigger On-Chain settleRound()
+                </button>
+            </div>
+
+            <!-- Stake Amount Selector ($5 Default) -->
+            <div class="flex items-center justify-between mb-2.5">
+                <span class="text-xs font-bold text-slate-300 uppercase tracking-wide">Stake Amount</span>
+                <span class="text-[11px] font-semibold text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded-md border border-blue-500/20">
+                    Selected: <span id="selectedStakeSummary" class="font-mono font-bold text-white">$5 (0.0085 tBNB)</span>
+                </span>
+            </div>
+
+            <div class="grid grid-cols-4 gap-2 mb-4" id="stakePresetsGrid">
+                <button data-usd="5" data-bnb="0.0085" class="stake-btn py-2 rounded-xl font-mono text-xs font-extrabold bg-blue-600 text-white border border-blue-400 shadow-md transition flex flex-col items-center">
+                    <span>$5</span>
+                    <span class="text-[9px] opacity-85">0.0085</span>
+                </button>
+                <button data-usd="10" data-bnb="0.0170" class="stake-btn py-2 rounded-xl font-mono text-xs font-bold bg-obsidian-800 text-slate-300 border border-white/10 hover:bg-obsidian-700 transition flex flex-col items-center">
+                    <span>$10</span>
+                    <span class="text-[9px] opacity-75">0.0170</span>
+                </button>
+                <button data-usd="25" data-bnb="0.0420" class="stake-btn py-2 rounded-xl font-mono text-xs font-bold bg-obsidian-800 text-slate-300 border border-white/10 hover:bg-obsidian-700 transition flex flex-col items-center">
+                    <span>$25</span>
+                    <span class="text-[9px] opacity-75">0.0420</span>
+                </button>
+                <button data-usd="50" data-bnb="0.0850" class="stake-btn py-2 rounded-xl font-mono text-xs font-bold bg-obsidian-800 text-slate-300 border border-white/10 hover:bg-obsidian-700 transition flex flex-col items-center">
+                    <span>$50</span>
+                    <span class="text-[9px] opacity-75">0.0850</span>
+                </button>
+            </div>
+
+            <!-- Three Color Action Buttons -->
+            <div class="grid grid-cols-3 gap-2.5">
+                <button id="betGreenBtn" onclick="placeBet(0)" class="btn-green rounded-2xl py-3.5 px-2 flex flex-col items-center justify-center text-white">
+                    <span class="text-sm font-extrabold tracking-wide">GREEN</span>
+                    <span class="text-[10px] font-mono opacity-90 mt-0.5">Least Wins</span>
+                </button>
+
+                <button id="betVioletBtn" onclick="placeBet(1)" class="btn-violet rounded-2xl py-3.5 px-2 flex flex-col items-center justify-center text-white">
+                    <span class="text-sm font-extrabold tracking-wide">VIOLET</span>
+                    <span class="text-[10px] font-mono opacity-90 mt-0.5">Least Wins</span>
+                </button>
+
+                <button id="betRedBtn" onclick="placeBet(2)" class="btn-red rounded-2xl py-3.5 px-2 flex flex-col items-center justify-center text-white">
+                    <span class="text-sm font-extrabold tracking-wide">RED</span>
+                    <span class="text-[10px] font-mono opacity-90 mt-0.5">Least Wins</span>
+                </button>
+            </div>
+
+            <!-- Current Round Active User Stakes -->
+            <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span class="text-slate-400 font-medium">Your Round Stake:</span>
+                <div id="userRoundBetsChips" class="flex items-center gap-1.5 font-mono font-bold text-slate-300">
+                    <span class="text-slate-500 italic font-sans font-normal">None placed yet</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Claimable Winnings Banner (Appears when user has unclaimed winning rounds) -->
+        <section id="claimBanner" class="hidden glass-card rounded-2xl p-3.5 border border-emerald-500/40 bg-gradient-to-r from-emerald-950/60 to-obsidian-900">
+            <div class="flex items-center justify-between gap-3">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1">
+                        <i class="fa-solid fa-gift"></i> Unclaimed Prize Ready
+                    </span>
+                    <p id="claimableSummaryText" class="text-sm font-mono font-extrabold text-white mt-0.5">
+                        0.0000 tBNB (Epoch #1000)
+                    </p>
+                </div>
+                <button id="claimWinningsBtn" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-obsidian-950 font-extrabold text-xs shadow-lg shadow-emerald-500/25 active:scale-95 transition">
+                    Claim Winnings
+                </button>
+            </div>
+        </section>
+
+        <!-- Recent Epoch Winners -->
+        <section class="glass-card rounded-2xl p-3.5">
+            <div class="flex items-center justify-between mb-2.5">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-clock-rotate-left text-blue-400"></i> Recent Epoch Winners
+                </h2>
+                <span class="text-[10px] text-slate-400">Last 10 rounds</span>
+            </div>
+            <div id="recentResultsStrip" class="flex items-center justify-between gap-1.5 overflow-x-auto py-1">
+                <!-- Populated via JS -->
+            </div>
+        </section>
+
+        <!-- Transaction & Bet Ledger -->
+        <section class="glass-card rounded-2xl p-3.5">
+            <div class="flex items-center justify-between mb-2.5">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-receipt text-emerald-400"></i> On-Chain & Sim Ledger
+                </h2>
+                <span id="betCountBadge" class="text-[10px] font-mono bg-obsidian-800 px-2 py-0.5 rounded-md text-slate-300">0 Txs</span>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-white/10 text-[10px] uppercase text-slate-400">
+                            <th class="py-2 pr-1">Epoch / Tx</th>
+                            <th class="py-2 px-1">Pick</th>
+                            <th class="py-2 px-1">Stake</th>
+                            <th class="py-2 px-1">Win</th>
+                            <th class="py-2 pl-1 text-right">Status / Payout</th>
+                        </tr>
+                    </thead>
+                    <tbody id="betHistoryTableBody" class="divide-y divide-white/5 text-xs">
+                        <tr>
+                            <td colspan="5" class="py-6 text-center text-slate-500 text-xs">
+                                Place a $5 stake on Green, Violet, or Red to test the 5% Creator split.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-11/12 max-w-sm pointer-events-none flex flex-col gap-2"></div>
+
+    <!-- Round Settlement Modal -->
+    <div id="resultModal" class="hidden fixed inset-0 z-50 bg-obsidian-950/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-xs rounded-3xl p-6 text-center border border-white/15 animate-bounce-in relative overflow-hidden">
+            <div id="modalGlowBg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full blur-3xl opacity-40 pointer-events-none bg-emerald-500"></div>
+
+            <div id="modalIconBadge" class="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center text-3xl mb-3 shadow-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <span id="modalRoundLabel" class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">EPOCH #1001</span>
+            <h2 id="modalTitle" class="text-2xl font-extrabold text-white mt-0.5">YOU WON!</h2>
+            <p id="modalSubtitle" class="text-xs text-slate-300 mt-1">Green held the lowest staked pool!</p>
+
+            <div class="my-4 bg-obsidian-950/85 rounded-2xl p-3 border border-white/5 text-left space-y-1.5 font-mono text-xs">
+                <div class="flex justify-between items-center">
+                    <span class="text-emerald-400 font-bold">GREEN Pool:</span>
+                    <span id="modalGreenTotal" class="text-slate-200">0</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-violet-400 font-bold">VIOLET Pool:</span>
+                    <span id="modalVioletTotal" class="text-slate-200">0</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-rose-400 font-bold">RED Pool:</span>
+                    <span id="modalRedTotal" class="text-slate-200">0</span>
+                </div>
+                <div class="pt-1.5 mt-1.5 border-t border-white/10 flex justify-between items-center">
+                    <span class="text-amber-400 font-sans font-semibold">Creator Fee (5%):</span>
+                    <span id="modalCreatorFeeText" class="text-amber-400 font-bold">0.0000</span>
+                </div>
+                <div class="flex justify-between items-center font-bold">
+                    <span class="text-slate-400 font-sans">Your Share (95% Pool):</span>
+                    <span id="modalPayoutText" class="text-emerald-400 text-sm">+0.0000</span>
+                </div>
+            </div>
+
+            <button id="closeModalBtn" class="w-full py-3 rounded-xl bg-white text-obsidian-950 font-extrabold text-sm hover:bg-slate-100 active:scale-95 transition shadow-lg">
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- Creator & Smart Contract Deployment Drawer Modal -->
+    <div id="creatorDrawerModal" class="hidden fixed inset-0 z-50 bg-obsidian-950/90 backdrop-blur-md flex items-center justify-center p-3">
+        <div class="glass-card w-full max-w-md rounded-3xl p-5 border border-white/15 max-h-[92vh] flex flex-col">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-sack-dollar text-amber-400"></i>
+                    <h3 class="text-sm font-extrabold text-white">Creator Profit & Smart Contract</h3>
+                </div>
+                <button id="closeCreatorDrawerBtn" class="w-7 h-7 rounded-lg bg-obsidian-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="overflow-y-auto py-3 space-y-4 text-xs">
+                <!-- Creator Profit Tracker Card -->
+                <div class="p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/15 to-obsidian-950 border border-amber-500/30">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">Total 5% Creator Profit Earned</span>
+                            <div class="font-mono text-xl font-extrabold text-white mt-0.5">
+                                <span id="drawerCreatorTotal">0.0000</span> <span id="drawerCreatorUnit" class="text-xs text-amber-400">tBNB</span>
+                            </div>
+                            <span id="drawerCreatorUsd" class="text-[10px] font-mono text-slate-300">≈ $0.00 USD</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-lg">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-slate-300 mt-2 leading-relaxed">
+                        Every settled round automatically sends <strong>5% (500 BPS)</strong> of the total escrow pool directly to your Creator Wallet address on-chain.
+                    </p>
+                </div>
+
+                <!-- Contract & Creator Wallet Configuration Form -->
+                <div class="space-y-2.5">
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-300 mb-1">1. Your Creator Profit Wallet (0x...)</label>
+                        <input id="creatorWalletInput" type="text" placeholder="0xYourTrustWalletAddress..." class="w-full bg-obsidian-950 border border-white/15 rounded-xl px-3 py-2 font-mono text-[11px] text-amber-300 focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-300 mb-1">2. Deployed Smart Contract Address (0x...)</label>
+                        <input id="deployedContractInput" type="text" placeholder="Leave blank for Built-in Simulator Mode" class="w-full bg-obsidian-950 border border-white/15 rounded-xl px-3 py-2 font-mono text-[11px] text-blue-300 focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <div class="flex gap-2 pt-1">
+                        <button id="saveCreatorConfigBtn" class="flex-1 py-2.5 rounded-xl trust-btn text-white font-extrabold text-xs">
+                            Save Configuration
+                        </button>
+                        <button id="clearContractBtn" class="px-3 py-2.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 border border-white/10 text-slate-300 font-bold text-xs">
+                            Use Simulator
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Remix IDE Deployment Checklist -->
+                <div class="p-3 rounded-2xl bg-obsidian-950/90 border border-white/10 space-y-1.5">
+                    <h4 class="text-[11px] font-extrabold text-blue-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-rocket"></i> How to Deploy Live on BSC (5 Steps)
+                    </h4>
+                    <ol class="list-decimal list-inside text-[10px] text-slate-300 space-y-1 leading-relaxed">
+                        <li>Tap <strong>Copy Solidity</strong> below and open <span class="text-blue-300 font-mono">app.remix.live</span>.</li>
+                        <li>Create <span class="font-mono text-white">ColorPrediction5Percent.sol</span> and compile with <strong>Solidity 0.8.20+</strong>.</li>
+                        <li>In Remix Deploy tab, choose <strong>Injected Provider (Trust Wallet / MetaMask)</strong> on <strong>BSC Testnet (Chain 97)</strong> or <strong>BSC Mainnet (Chain 56)</strong>.</li>
+                        <li>Paste your <strong>Creator Profit Wallet (0x...)</strong> into the constructor box and click <strong>Deploy</strong>.</li>
+                        <li>Copy the new Contract Address, paste it above, and click <strong>Save Configuration</strong>.</li>
+                    </ol>
+                </div>
+
+                <!-- Solidity Smart Contract Viewer -->
+                <div>
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-[11px] font-bold text-slate-300">ColorPrediction5Percent.sol</span>
+                        <button id="copySolidityBtn" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-[10px] font-bold text-emerald-400 flex items-center gap-1">
+                            <i class="fa-regular fa-copy"></i> Copy Solidity
+                        </button>
+                    </div>
+                    <textarea id="solidityCodeBox" readonly rows="12" class="w-full bg-obsidian-950 border border-white/10 rounded-xl p-2.5 font-mono text-[10px] text-slate-300 leading-relaxed focus:outline-none">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title ColorPrediction5Percent
+ * @notice 2-Minute Minority-Rule Color Pool with automatic 5% Creator Profit
+ */
+contract ColorPrediction5Percent {
+    uint256 public constant CREATOR_FEE_BPS = 500; // 5.00%
+    uint256 public constant BPS_DENOMINATOR = 10000;
+    uint256 public constant ROUND_DURATION = 120;  // 2 minutes
+    uint256 public constant LOCK_BUFFER = 10;      // Lock last 10 seconds
+
+    address payable public creatorWallet;
+    uint256 public currentRoundId;
+    uint256 public totalCreatorFees;
+    bool private locked;
+
+    struct Round {
+        uint256 startTime;
+        uint256[3] poolTotals; // 0: Green, 1: Violet, 2: Red
+        uint256 totalPool;
+        uint256 prizePool;
+        uint8 winningColor;
+        bool settled;
+    }
+
+    mapping(uint256 => Round) public rounds;
+    mapping(uint256 => mapping(address => mapping(uint8 => uint256))) public userBets;
+    mapping(uint256 => mapping(address => bool)) public claimed;
+
+    event BetPlaced(uint256 indexed roundId, address indexed player, uint8 color, uint256 amount);
+    event RoundSettled(uint256 indexed roundId, uint8 winningColor, uint256 creatorFee, uint256 prizePool);
+    event CreatorFeePaid(uint256 indexed roundId, address indexed creator, uint256 amount);
+    event WinningsClaimed(uint256 indexed roundId, address indexed player, uint256 payout);
+
+    modifier nonReentrant() {
+        require(!locked, "Reentrancy blocked");
+        locked = true;
+        _;
+        locked = false;
+    }
+
+    constructor(address payable _creatorWallet) {
+        require(_creatorWallet != address(0), "Invalid creator wallet");
+        creatorWallet = _creatorWallet;
+        _startNewRound();
+    }
+
+    function _startNewRound() internal {
+        currentRoundId += 1;
+        rounds[currentRoundId].startTime = block.timestamp;
+    }
+
+    function placeBet(uint8 _color) external payable nonReentrant {
+        require(_color < 3, "Invalid color (0=Green,1=Violet,2=Red)");
+        require(msg.value > 0, "Stake must be greater than 0");
+
+        Round storage r = rounds[currentRoundId];
+        require(!r.settled, "Round already settled");
+        require(block.timestamp < r.startTime + ROUND_DURATION - LOCK_BUFFER, "Round locked");
+
+        r.poolTotals[_color] += msg.value;
+        r.totalPool += msg.value;
+        userBets[currentRoundId][msg.sender][_color] += msg.value;
+
+        emit BetPlaced(currentRoundId, msg.sender, _color, msg.value);
+    }
+
+    function settleRound(uint256 _roundId) external nonReentrant {
+        Round storage r = rounds[_roundId];
+        require(r.startTime > 0, "Round does not exist");
+        require(!r.settled, "Already settled");
+        require(block.timestamp >= r.startTime + ROUND_DURATION, "Round still active");
+
+        uint256 creatorFee = (r.totalPool * CREATOR_FEE_BPS) / BPS_DENOMINATOR;
+        uint256 prizePool = r.totalPool - creatorFee;
+
+        // Determine lowest non-zero staked color pool
+        uint8 winner = 0;
+        uint256 lowestAmount = type(uint256).max;
+        for (uint8 i = 0; i < 3; i++) {
+            if (r.poolTotals[i] > 0 && r.poolTotals[i] < lowestAmount) {
+                lowestAmount = r.poolTotals[i];
+                winner = i;
+            }
+        }
+
+        r.winningColor = winner;
+        r.prizePool = prizePool;
+        r.settled = true;
+
+        if (creatorFee > 0) {
+            totalCreatorFees += creatorFee;
+            (bool sent, ) = creatorWallet.call{value: creatorFee}("");
+            require(sent, "Creator fee transfer failed");
+            emit CreatorFeePaid(_roundId, creatorWallet, creatorFee);
+        }
+
+        emit RoundSettled(_roundId, winner, creatorFee, prizePool);
+
+        if (_roundId == currentRoundId) {
+            _startNewRound();
+        }
+    }
+
+    function claimWinnings(uint256 _roundId) external nonReentrant {
+        Round storage r = rounds[_roundId];
+        require(r.settled, "Round not settled");
+        require(!claimed[_roundId][msg.sender], "Already claimed");
+
+        uint256 userStake = userBets[_roundId][msg.sender][r.winningColor];
+        require(userStake > 0, "No winning stake");
+
+        uint256 winningPoolTotal = r.poolTotals[r.winningColor];
+        require(winningPoolTotal > 0, "Empty winning pool");
+
+        claimed[_roundId][msg.sender] = true;
+        uint256 payout = (userStake * r.prizePool) / winningPoolTotal;
+
+        (bool sent, ) = payable(msg.sender).call{value: payout}("");
+        require(sent, "Payout transfer failed");
+
+        emit WinningsClaimed(_roundId, msg.sender, payout);
+    }
+}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * COLOR POOL WEB3 dAPP (TRUST WALLET + 5% CREATOR PROFIT PROTOCOL)
+         * Built with Ethers.js v6 for live EVM smart contract interaction & local Web3 simulation.
+         */
+
+        const ROUND_DURATION = 120; // 2 minutes
+        const LOCK_BUFFER = 10;     // Lock betting during final 10s
+        const CREATOR_FEE_RATE = 0.05; // 5% Creator Profit
+        const BNB_USD_RATE = 600;   // Reference display conversion ($600/BNB -> $5 ≈ 0.0085 BNB)
+
+        const CHAINS = {
+            '0x61': {
+                chainId: '0x61',
+                name: 'BSC Testnet',
+                symbol: 'tBNB',
+                rpcUrls: ['https://data-seed-prebsc-1-s1.binance.org:8545/'],
+                explorer: 'https://testnet.bscscan.com/'
+            },
+            '0x38': {
+                chainId: '0x38',
+                name: 'BNB Smart Chain',
+                symbol: 'BNB',
+                rpcUrls: ['https://bsc-dataseed.binance.org/'],
+                explorer: 'https://bscscan.com/'
+            }
+        };
+
+        // Human-Readable ABI for ColorPrediction5Percent.sol
+        const CONTRACT_ABI = [
+            "function currentRoundId() view returns (uint256)",
+            "function creatorWallet() view returns (address)",
+            "function totalCreatorFees() view returns (uint256)",
+            "function rounds(uint256) view returns (uint256 startTime, uint256 totalPool, uint256 prizePool, uint8 winningColor, bool settled)",
+            "function placeBet(uint8 _color) payable",
+            "function settleRound(uint256 _roundId)",
+            "function claimWinnings(uint256 _roundId)"
+        ];
+
+        let state = {
+            // Wallet & Network
+            isConnected: false,
+            rawProvider: null,
+            browserProvider: null,
+            signer: null,
+            account: null,
+            chainId: '0x61',
+            nativeBalance: 0.2500, // Default simulator tBNB balance
+
+            // Creator & Contract Config (Persisted in localStorage)
+            creatorWallet: localStorage.getItem('cp_creator_wallet') || '0xCreator7770000000000000000000000000005PCT',
+            contractAddress: localStorage.getItem('cp_contract_address') || '',
+            totalCreatorFeesEarned: parseFloat(localStorage.getItem('cp_creator_fees') || '0'),
+
+            // Selected Stake ($5 default = 0.0085 BNB)
+            selectedUsd: 5,
+            selectedBnb: 0.0085,
+
+            // Round State
+            roundId: 1001,
+            timeLeft: ROUND_DURATION,
+            isLocked: false,
+
+            // Pools in BNB/tBNB
+            pools: [0, 0, 0], // [0: Green, 1: Violet, 2: Red]
+            userRoundBets: [0, 0, 0],
+            lastTxHash: null,
+
+            // Claimable Winnings & History
+            claimableQueue: [], // [{ roundId, payout, txHash }]
+            recentResults: [],
+            betHistory: []
+        };
+
+        // --- Toast Helper (Never uses alert()) ---
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            const styles = {
+                success: 'bg-emerald-950/95 border-emerald-500/50 text-emerald-200',
+                error: 'bg-rose-950/95 border-rose-500/50 text-rose-200',
+                warning: 'bg-amber-950/95 border-amber-500/50 text-amber-200',
+                info: 'bg-obsidian-800/95 border-blue-500/50 text-slate-100'
+            };
+            const icons = {
+                success: 'fa-circle-check text-emerald-400',
+                error: 'fa-circle-exclamation text-rose-400',
+                warning: 'fa-triangle-exclamation text-amber-400',
+                info: 'fa-circle-info text-blue-400'
+            };
+            toast.className = `px-4 py-2.5 rounded-xl border shadow-xl backdrop-blur-md text-xs font-semibold flex items-center gap-2.5 transition-all duration-300 ${styles[type] || styles.info}`;
+            toast.innerHTML = `<i class="fa-solid ${icons[type] || icons.info} text-sm"></i><span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', '-translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+
+        function shortenAddress(addr) {
+            if (!addr || addr.length < 10) return addr || '';
+            return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
+        }
+
+        function getCurrencySymbol() {
+            return CHAINS[state.chainId]?.symbol || 'tBNB';
+        }
+
+        function isLiveContractActive() {
+            return state.isConnected && state.signer && /^0x[a-fA-F0-9]{40}$/.test(state.contractAddress);
+        }
+
+        // --- Trust Wallet Detection & Deep Link ---
+        function getInjectedProvider() {
+            if (window.trustwallet && window.trustwallet.ethereum) {
+                return window.trustwallet.ethereum;
+            }
+            if (window.ethereum) {
+                return window.ethereum;
+            }
+            return null;
+        }
+
+        function setupTrustDeepLink() {
+            const deepLinkBtn = document.getElementById('trustDeepLinkBtn');
+            const banner = document.getElementById('trustBrowserBanner');
+            const provider = getInjectedProvider();
+
+            deepLinkBtn.href = `https://link.trustwallet.com/open_url?coin_id=60&url=${encodeURIComponent(window.location.href)}`;
+
+            if (provider && (provider.isTrust || provider.isTrustWallet || window.trustwallet)) {
+                banner.classList.add('hidden');
+            }
+        }
+
+        async function connectTrustWallet() {
+            const rawProvider = getInjectedProvider();
+            if (!rawProvider) {
+                showToast('No Web3 wallet detected. Tap "Open App" to launch inside Trust Wallet!', 'warning');
+                return;
+            }
+
+            try {
+                const browserProvider = new ethers.BrowserProvider(rawProvider);
+                const accounts = await browserProvider.send('eth_requestAccounts', []);
+                if (!accounts || accounts.length === 0) {
+                    showToast('Wallet connection canceled.', 'warning');
+                    return;
+                }
+
+                const signer = await browserProvider.getSigner();
+                const network = await browserProvider.getNetwork();
+                const chainHex = '0x' + network.chainId.toString(16);
+
+                state.rawProvider = rawProvider;
+                state.browserProvider = browserProvider;
+                state.signer = signer;
+                state.account = accounts[0];
+                state.chainId = chainHex;
+                state.isConnected = true;
+
+                // Auto-fill creator wallet input if still default placeholder
+                if (state.creatorWallet.includes('Creator777')) {
+                    state.creatorWallet = state.account;
+                    localStorage.setItem('cp_creator_wallet', state.account);
+                    document.getElementById('creatorWalletInput').value = state.account;
+                }
+
+                await refreshLiveWalletAndContract();
+
+                if (rawProvider.on) {
+                    rawProvider.on('accountsChanged', async (accs) => {
+                        if (accs.length === 0) {
+                            disconnectWallet();
+                        } else {
+                            state.account = accs[0];
+                            state.signer = await state.browserProvider.getSigner();
+                            await refreshLiveWalletAndContract();
+                        }
+                    });
+                    rawProvider.on('chainChanged', async () => {
+                        state.browserProvider = new ethers.BrowserProvider(rawProvider);
+                        state.signer = await state.browserProvider.getSigner();
+                        const net = await state.browserProvider.getNetwork();
+                        state.chainId = '0x' + net.chainId.toString(16);
+                        await refreshLiveWalletAndContract();
+                    });
+                }
+
+                updateAllUI();
+                showToast(`Trust Wallet Connected: ${shortenAddress(state.account)}`, 'success');
+            } catch (err) {
+                console.error('Wallet connect error:', err);
+                showToast(err.shortMessage || err.message || 'Connection rejected.', 'error');
+            }
+        }
+
+        function disconnectWallet() {
+            state.isConnected = false;
+            state.account = null;
+            state.signer = null;
+            state.nativeBalance = 0.2500;
+            state.chainId = '0x61';
+            updateAllUI();
+            showToast('Disconnected. Running in Local Web3 Simulator.', 'info');
+        }
+
+        async function refreshLiveWalletAndContract() {
+            if (!state.isConnected || !state.browserProvider || !state.account) return;
+
+            try {
+                const balWei = await state.browserProvider.getBalance(state.account);
+                state.nativeBalance = parseFloat(ethers.formatEther(balWei));
+
+                // If a valid Contract Address is configured, read live on-chain round & creator fees
+                if (isLiveContractActive()) {
+                    const contract = new ethers.Contract(state.contractAddress, CONTRACT_ABI, state.browserProvider);
+                    const [onChainRoundId, onChainCreatorFees] = await Promise.all([
+                        contract.currentRoundId(),
+                        contract.totalCreatorFees()
+                    ]);
+
+                    state.roundId = Number(onChainRoundId);
+                    state.totalCreatorFeesEarned = parseFloat(ethers.formatEther(onChainCreatorFees));
+
+                    const roundData = await contract.rounds(onChainRoundId);
+                    const startTime = Number(roundData.startTime);
+                    const nowSec = Math.floor(Date.now() / 1000);
+                    const elapsed = Math.max(0, nowSec - startTime);
+                    state.timeLeft = Math.max(0, ROUND_DURATION - elapsed);
+                }
+
+                updateAllUI();
+            } catch (err) {
+                console.warn('On-chain read warning:', err);
+            }
+        }
+
+        async function switchChain(targetChainId) {
+            if (!state.rawProvider) {
+                state.chainId = targetChainId;
+                updateAllUI();
+                showToast(`Switched simulator network to ${CHAINS[targetChainId].name}`, 'info');
+                return;
+            }
+
+            const chainSpec = CHAINS[targetChainId];
+            try {
+                await state.rawProvider.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: targetChainId }]
+                });
+            } catch (err) {
+                if (err.code === 4902 && chainSpec) {
+                    try {
+                        await state.rawProvider.request({
+                            method: 'wallet_addEthereumChain',
+                            params: [{
+                                chainId: chainSpec.chainId,
+                                chainName: chainSpec.name,
+                                nativeCurrency: {
+                                    name: chainSpec.symbol,
+                                    symbol: chainSpec.symbol,
+                                    decimals: 18
+                                },
+                                rpcUrls: chainSpec.rpcUrls,
+                                blockExplorerUrls: [chainSpec.explorer]
+                            }]
+                        });
+                    } catch (addErr) {
+                        showToast('Failed to add network in Trust Wallet.', 'error');
+                    }
+                } else {
+                    showToast('Network switch canceled.', 'warning');
+                }
+            }
+        }
+
+        // --- Place Bet (Executes Live Smart Contract Tx OR Simulator) ---
+        async function placeBet(colorIndex) {
+            if (state.isLocked) {
+                showToast('Escrow is locked for the final 10 seconds!', 'warning');
+                return;
+            }
+
+            const stakeBnb = state.selectedBnb;
+            const colorNames = ['GREEN', 'VIOLET', 'RED'];
+
+            if (isLiveContractActive()) {
+                // LIVE ON-CHAIN TRANSACTION VIA TRUST WALLET
+                if (state.nativeBalance < stakeBnb) {
+                    showToast(`Insufficient ${getCurrencySymbol()} balance for stake + gas.`, 'error');
+                    return;
+                }
+
+                try {
+                    showToast(`Confirm $${state.selectedUsd} (${stakeBnb} ${getCurrencySymbol()}) in Trust Wallet...`, 'info');
+                    const contract = new ethers.Contract(state.contractAddress, CONTRACT_ABI, state.signer);
+                    const tx = await contract.placeBet(colorIndex, {
+                        value: ethers.parseEther(stakeBnb.toString())
+                    });
+
+                    showToast(`Tx submitted! Waiting confirmation...`, 'info');
+                    const receipt = await tx.wait();
+
+                    state.pools[colorIndex] = Number((state.pools[colorIndex] + stakeBnb).toFixed(4));
+                    state.userRoundBets[colorIndex] = Number((state.userRoundBets[colorIndex] + stakeBnb).toFixed(4));
+                    state.lastTxHash = receipt.hash;
+
+                    await refreshLiveWalletAndContract();
+                    updateAllUI();
+                    showToast(`Confirmed on-chain! Tx: ${receipt.hash.slice(0, 10)}...`, 'success');
+                } catch (err) {
+                    console.error('placeBet tx error:', err);
+                    showToast(err.code === 'ACTION_REJECTED' ? 'Transaction rejected in Trust Wallet.' : (err.shortMessage || 'Contract transaction failed.'), 'error');
+                }
+            } else {
+                // LOCAL WEB3 SIMULATOR MODE
+                if (state.nativeBalance < stakeBnb) {
+                    showToast(`Insufficient sandbox balance! Tap "+0.25 ${getCurrencySymbol()}" above.`, 'error');
+                    return;
+                }
+
+                state.nativeBalance = Number((state.nativeBalance - stakeBnb).toFixed(4));
+                state.pools[colorIndex] = Number((state.pools[colorIndex] + stakeBnb).toFixed(4));
+                state.userRoundBets[colorIndex] = Number((state.userRoundBets[colorIndex] + stakeBnb).toFixed(4));
+                state.lastTxHash = '0x' + Array.from({ length: 12 }, () => Math.floor(Math.random() * 16).toString(16)).join('');
+
+                updateAllUI();
+                showToast(`Staked $${state.selectedUsd} (${stakeBnb} ${getCurrencySymbol()}) on ${colorNames[colorIndex]}`, 'success');
+            }
+        }
+
+        // --- Settle Round & Automatic 5% Creator Profit Distribution ---
+        function seedRoundLiquidity() {
+            if (isLiveContractActive()) {
+                state.pools = [0, 0, 0];
+            } else {
+                // Seed realistic crowd liquidity so 5% creator split & 95% winners pool are immediately clear
+                const presets = [0.0085, 0.0170, 0.0255, 0.0340];
+                state.pools = [
+                    presets[Math.floor(Math.random() * presets.length)],
+                    presets[Math.floor(Math.random() * presets.length)],
+                    presets[Math.floor(Math.random() * presets.length)]
+                ];
+            }
+            state.userRoundBets = [0, 0, 0];
+            state.lastTxHash = null;
+        }
+
+        function simulateCrowdBets() {
+            if (state.isLocked || isLiveContractActive()) return;
+            if (Math.random() < 0.55) {
+                const pick = [0, 0, 1, 2, 2][Math.floor(Math.random() * 5)];
+                const add = Math.random() < 0.7 ? 0.0085 : 0.0170;
+                state.pools[pick] = Number((state.pools[pick] + add).toFixed(4));
+                updatePoolSplitAndBarsUI();
+            }
+        }
+
+        async function triggerOnChainSettle() {
+            if (!isLiveContractActive()) return;
+            try {
+                showToast('Signing settleRound() in Trust Wallet...', 'info');
+                const contract = new ethers.Contract(state.contractAddress, CONTRACT_ABI, state.signer);
+                const tx = await contract.settleRound(state.roundId);
+                await tx.wait();
+                showToast('Round settled on-chain & 5% sent to Creator Wallet!', 'success');
+                await refreshLiveWalletAndContract();
+            } catch (err) {
+                showToast(err.shortMessage || 'Could not settle round yet.', 'error');
+            }
+        }
+
+        function settleSimulatorRound() {
+            const totalPool = Number((state.pools[0] + state.pools[1] + state.pools[2]).toFixed(4));
+            const creatorFee = Number((totalPool * CREATOR_FEE_RATE).toFixed(4));
+            const winnersPrizePool = Number((totalPool - creatorFee).toFixed(4));
+
+            // Credit 5% Creator Profit automatically
+            state.totalCreatorFeesEarned = Number((state.totalCreatorFeesEarned + creatorFee).toFixed(4));
+            localStorage.setItem('cp_creator_fees', state.totalCreatorFeesEarned.toString());
+
+            // Determine Lowest Staked Pool (Winner) & Highest Staked Pool (Loser)
+            const indexed = [
+                { idx: 0, name: 'GREEN', val: state.pools[0] },
+                { idx: 1, name: 'VIOLET', val: state.pools[1] },
+                { idx: 2, name: 'RED', val: state.pools[2] }
+            ].sort((a, b) => a.val - b.val);
+
+            const minVal = indexed[0].val;
+            const lowestGroup = indexed.filter(x => x.val === minVal);
+            const winnerObj = lowestGroup[Math.floor(Math.random() * lowestGroup.length)];
+            const loserObj = indexed[indexed.length - 1];
+
+            state.recentResults.unshift({ roundId: state.roundId, winnerIdx: winnerObj.idx });
+            if (state.recentResults.length > 10) state.recentResults.pop();
+
+            // Calculate proportional payout from the 95% Winners Prize Pool
+            const totalUserStake = Number((state.userRoundBets[0] + state.userRoundBets[1] + state.userRoundBets[2]).toFixed(4));
+            const userWinningStake = state.userRoundBets[winnerObj.idx];
+            const winningPoolTotal = state.pools[winnerObj.idx];
+
+            let userPayout = 0;
+            if (userWinningStake > 0 && winningPoolTotal > 0) {
+                userPayout = Number(((userWinningStake / winningPoolTotal) * winnersPrizePool).toFixed(4));
+                state.claimableQueue.push({
+                    roundId: state.roundId,
+                    payout: userPayout
+                });
+            }
+
+            // Record in Ledger if user participated
+            if (totalUserStake > 0) {
+                [0, 1, 2].forEach(cIdx => {
+                    const st = state.userRoundBets[cIdx];
+                    if (st > 0) {
+                        const isWin = cIdx === winnerObj.idx;
+                        const share = isWin ? Number(((st / winningPoolTotal) * winnersPrizePool).toFixed(4)) : 0;
+                        state.betHistory.unshift({
+                            roundId: state.roundId,
+                            txHash: state.lastTxHash || '0xsim...tx',
+                            pickIdx: cIdx,
+                            stake: st,
+                            winnerIdx: winnerObj.idx,
+                            status: isWin ? 'CLAIMABLE' : 'FAIL',
+                            payout: share
+                        });
+                    }
+                });
+
+                showSettlementModal({
+                    roundId: state.roundId,
+                    winnerObj,
+                    loserObj,
+                    poolsSnapshot: [...state.pools],
+                    creatorFee,
+                    totalUserStake,
+                    userPayout
+                });
+            } else {
+                showToast(`Epoch #${state.roundId} Settled: ${winnerObj.name} won! Creator +${creatorFee} ${getCurrencySymbol()}`, 'info');
+            }
+
+            // Advance to next 2-minute round
+            state.roundId += 1;
+            state.timeLeft = ROUND_DURATION;
+            state.isLocked = false;
+            seedRoundLiquidity();
+            updateAllUI();
+        }
+
+        // --- Claim Winnings (95% Prize Pool Distribution) ---
+        async function claimWinnings() {
+            if (state.claimableQueue.length === 0) return;
+            const nextClaim = state.claimableQueue[0];
+
+            if (isLiveContractActive()) {
+                try {
+                    showToast(`Confirm claimWinnings(#${nextClaim.roundId}) in Trust Wallet...`, 'info');
+                    const contract = new ethers.Contract(state.contractAddress, CONTRACT_ABI, state.signer);
+                    const tx = await contract.claimWinnings(nextClaim.roundId);
+                    await tx.wait();
+
+                    state.claimableQueue.shift();
+                    await refreshLiveWalletAndContract();
+                    updateAllUI();
+                    showToast(`Claimed on-chain winnings for Epoch #${nextClaim.roundId}!`, 'success');
+                } catch (err) {
+                    showToast(err.shortMessage || 'Claim transaction failed.', 'error');
+                }
+            } else {
+                // Simulator instant credit
+                state.nativeBalance = Number((state.nativeBalance + nextClaim.payout).toFixed(4));
+                state.betHistory.forEach(item => {
+                    if (item.roundId === nextClaim.roundId && item.status === 'CLAIMABLE') {
+                        item.status = 'CLAIMED';
+                    }
+                });
+                state.claimableQueue.shift();
+                updateAllUI();
+                showToast(`Claimed +${nextClaim.payout} ${getCurrencySymbol()} to wallet!`, 'success');
+            }
+        }
+
+        // --- UI Rendering Functions ---
+        function updateWalletAndHeaderUI() {
+            const sym = getCurrencySymbol();
+            const chainInfo = CHAINS[state.chainId] || { name: 'EVM Network' };
+
+            document.getElementById('networkDot').className = state.isConnected
+                ? 'w-1.5 h-1.5 rounded-full bg-emerald-400'
+                : 'w-1.5 h-1.5 rounded-full bg-amber-400';
+            document.getElementById('networkBadgeText').textContent = state.isConnected
+                ? chainInfo.name
+                : 'Simulator Mode';
+
+            document.getElementById('connectBtnLabel').textContent = state.isConnected
+                ? shortenAddress(state.account)
+                : 'Connect Trust';
+
+            const modeTag = document.getElementById('walletModeTag');
+            const contractTag = document.getElementById('contractModeTag');
+
+            if (state.isConnected) {
+                modeTag.textContent = 'Trust Wallet Live';
+                modeTag.className = 'text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/40';
+                document.getElementById('walletAddressSubtext').textContent = `Wallet: ${shortenAddress(state.account)} • Creator: ${shortenAddress(state.creatorWallet)}`;
+                document.getElementById('topUpBtnLabel').textContent = 'Disconnect';
+            } else {
+                modeTag.textContent = 'Local Web3 Simulator';
+                modeTag.className = 'text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/30';
+                document.getElementById('walletAddressSubtext').textContent = `Creator Wallet: ${shortenAddress(state.creatorWallet)}`;
+                document.getElementById('topUpBtnLabel').textContent = `+0.25 ${sym}`;
+            }
+
+            if (isLiveContractActive()) {
+                contractTag.textContent = `Live: ${shortenAddress(state.contractAddress)}`;
+                contractTag.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-300 border border-emerald-500/30';
+            } else {
+                contractTag.textContent = 'Sim Escrow (5% Fee)';
+                contractTag.className = 'text-[10px] font-mono font-semibold px-2 py-0.5 rounded-md bg-obsidian-800 text-slate-300 border border-white/10';
+            }
+
+            document.getElementById('walletBalance').textContent = state.nativeBalance.toFixed(4);
+            document.getElementById('currencySymbol').textContent = sym;
+            document.getElementById('walletUsdApprox').textContent = `($${(state.nativeBalance * BNB_USD_RATE).toFixed(2)})`;
+
+            // Update Creator Profit Displays
+            const creatorUsd = (state.totalCreatorFeesEarned * BNB_USD_RATE).toFixed(2);
+            document.getElementById('headerCreatorEarnings').textContent = `${state.totalCreatorFeesEarned.toFixed(4)} ${sym} ($${creatorUsd})`;
+            document.getElementById('drawerCreatorTotal').textContent = state.totalCreatorFeesEarned.toFixed(4);
+            document.getElementById('drawerCreatorUnit').textContent = sym;
+            document.getElementById('drawerCreatorUsd').textContent = `≈ $${creatorUsd} USD (5% Automatic Cut)`;
+
+            // Update Selected Stake Label
+            document.getElementById('selectedStakeSummary').textContent = `$${state.selectedUsd} (${state.selectedBnb} ${sym})`;
+        }
+
+        function updateTimerUI() {
+            const timerEl = document.getElementById('countdownDisplay');
+            const badge = document.getElementById('roundStatusBadge');
+            const overlay = document.getElementById('lockOverlay');
+            const manualSettleBtn = document.getElementById('manualSettleBtn');
+            const btns = ['betGreenBtn', 'betVioletBtn', 'betRedBtn'].map(id => document.getElementById(id));
+
+            document.getElementById('periodId').textContent = `#${state.roundId}`;
+            const mins = Math.floor(state.timeLeft / 60);
+            const secs = state.timeLeft % 60;
+            timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+            if (state.timeLeft <= LOCK_BUFFER) {
+                state.isLocked = true;
+                timerEl.classList.add('timer-urgent', 'animate-pulse-fast');
+                badge.className = 'inline-flex items-center gap-1.5 mt-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30';
+                badge.innerHTML = '<i class="fa-solid fa-lock text-[9px]"></i> ESCROW LOCKED';
+                overlay.classList.remove('hidden');
+                btns.forEach(b => { b.disabled = true; b.classList.add('btn-disabled'); });
+
+                if (isLiveContractActive() && state.timeLeft === 0) {
+                    manualSettleBtn.classList.remove('hidden');
+                } else {
+                    manualSettleBtn.classList.add('hidden');
+                }
+            } else {
+                state.isLocked = false;
+                timerEl.classList.remove('timer-urgent', 'animate-pulse-fast');
+                badge.className = 'inline-flex items-center gap-1.5 mt-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30';
+                badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> POOL OPEN';
+                overlay.classList.add('hidden');
+                btns.forEach(b => { b.disabled = false; b.classList.remove('btn-disabled'); });
+            }
+        }
+
+        function updatePoolSplitAndBarsUI() {
+            const [g, v, r] = state.pools;
+            const total = Number((g + v + r).toFixed(4));
+            const creatorCut = Number((total * CREATOR_FEE_RATE).toFixed(4));
+            const winnersCut = Number((total - creatorCut).toFixed(4));
+            const sym = getCurrencySymbol();
+
+            document.getElementById('splitTotalPool').textContent = `${total.toFixed(4)} ${sym}`;
+            document.getElementById('splitTotalUsd').textContent = `$${(total * BNB_USD_RATE).toFixed(2)}`;
+
+            document.getElementById('splitCreatorFee').textContent = `${creatorCut.toFixed(4)} ${sym}`;
+            document.getElementById('splitCreatorUsd').textContent = `$${(creatorCut * BNB_USD_RATE).toFixed(2)}`;
+
+            document.getElementById('splitWinnersPool').textContent = `${winnersCut.toFixed(4)} ${sym}`;
+            document.getElementById('splitWinnersUsd').textContent = `$${(winnersCut * BNB_USD_RATE).toFixed(2)}`;
+
+            const denom = total || 1;
+            const gPct = total === 0 ? 33 : Math.round((g / denom) * 100);
+            const vPct = total === 0 ? 33 : Math.round((v / denom) * 100);
+            const rPct = total === 0 ? 34 : Math.max(0, 100 - gPct - vPct);
+
+            document.getElementById('greenPoolText').textContent = `${g.toFixed(4)} ${sym} (${gPct}%)`;
+            document.getElementById('violetPoolText').textContent = `${v.toFixed(4)} ${sym} (${vPct}%)`;
+            document.getElementById('redPoolText').textContent = `${r.toFixed(4)} ${sym} (${rPct}%)`;
+
+            document.getElementById('greenPoolBar').style.width = `${gPct}%`;
+            document.getElementById('violetPoolBar').style.width = `${vPct}%`;
+            document.getElementById('redPoolBar').style.width = `${rPct}%`;
+        }
+
+        function updateUserStakesAndClaimUI() {
+            const sym = getCurrencySymbol();
+            const chipsEl = document.getElementById('userRoundBetsChips');
+            const names = ['GREEN', 'VIOLET', 'RED'];
+            const styles = [
+                'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+                'bg-violet-500/20 text-violet-300 border-violet-500/40',
+                'bg-rose-500/20 text-rose-300 border-rose-500/40'
+            ];
+
+            const active = state.userRoundBets
+                .map((amt, idx) => ({ amt, idx }))
+                .filter(x => x.amt > 0);
+
+            if (active.length === 0) {
+                chipsEl.innerHTML = `<span class="text-slate-500 italic font-sans font-normal">None placed yet</span>`;
+            } else {
+                chipsEl.innerHTML = active.map(x => `
+                    <span class="px-2 py-0.5 rounded-lg border text-[11px] ${styles[x.idx]}">
+                        ${names[x.idx]}: ${x.amt.toFixed(4)} ${sym}
+                    </span>
+                `).join('');
+            }
+
+            // Claim Banner
+            const claimBanner = document.getElementById('claimBanner');
+            if (state.claimableQueue.length > 0) {
+                const totalClaimable = state.claimableQueue.reduce((acc, c) => acc + c.payout, 0);
+                claimBanner.classList.remove('hidden');
+                document.getElementById('claimableSummaryText').textContent =
+                    `${totalClaimable.toFixed(4)} ${sym} ($${(totalClaimable * BNB_USD_RATE).toFixed(2)}) • ${state.claimableQueue.length} Round(s)`;
+            } else {
+                claimBanner.classList.add('hidden');
+            }
+        }
+
+        function updateRecentAndLedgerUI() {
+            const sym = getCurrencySymbol();
+            const strip = document.getElementById('recentResultsStrip');
+            const dotStyles = [
+                'bg-emerald-500 text-obsidian-950',
+                'bg-violet-500 text-white',
+                'bg-rose-500 text-white'
+            ];
+            const letters = ['G', 'V', 'R'];
+
+            strip.innerHTML = state.recentResults.map((item, idx) => `
+                <div class="flex flex-col items-center gap-1 shrink-0">
+                    <div class="w-7 h-7 rounded-full flex items-center justify-center font-extrabold text-[10px] shadow-md ${dotStyles[item.winnerIdx]} ${idx === 0 ? 'ring-2 ring-white scale-105' : 'opacity-85'}">
+                        ${letters[item.winnerIdx]}
+                    </div>
+                    <span class="text-[9px] font-mono text-slate-400">#${item.roundId}</span>
+                </div>
+            `).join('');
+
+            const tbody = document.getElementById('betHistoryTableBody');
+            document.getElementById('betCountBadge').textContent = `${state.betHistory.length} Txs`;
+
+            if (state.betHistory.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="py-6 text-center text-slate-500 text-xs">
+                            Place a $5 stake on Green, Violet, or Red to test the 5% Creator split.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            const badges = [
+                '<span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">GREEN</span>',
+                '<span class="px-1.5 py-0.5 rounded bg-violet-500/20 text-violet-400 font-bold text-[10px]">VIOLET</span>',
+                '<span class="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-400 font-bold text-[10px]">RED</span>'
+            ];
+
+            tbody.innerHTML = state.betHistory.slice(0, 15).map(row => {
+                const isWin = row.status !== 'FAIL';
+                return `
+                    <tr>
+                        <td class="py-2 pr-1 font-mono text-[10px] text-slate-300">
+                            <div>#${row.roundId}</div>
+                            <div class="text-[9px] text-blue-400">${row.txHash.slice(0, 8)}..</div>
+                        </td>
+                        <td class="py-2 px-1">${badges[row.pickIdx]}</td>
+                        <td class="py-2 px-1 font-mono text-[11px] text-slate-200">${row.stake.toFixed(4)}</td>
+                        <td class="py-2 px-1">${badges[row.winnerIdx]}</td>
+                        <td class="py-2 pl-1 text-right font-mono font-bold text-[11px] ${isWin ? 'text-emerald-400' : 'text-rose-400'}">
+                            ${isWin ? `+${row.payout.toFixed(4)} (${row.status})` : `-${row.stake.toFixed(4)}`}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function updateAllUI() {
+            updateWalletAndHeaderUI();
+            updateTimerUI();
+            updatePoolSplitAndBarsUI();
+            updateUserStakesAndClaimUI();
+            updateRecentAndLedgerUI();
+        }
+
+        function showSettlementModal({ roundId, winnerObj, loserObj, poolsSnapshot, creatorFee, totalUserStake, userPayout }) {
+            const modal = document.getElementById('resultModal');
+            const sym = getCurrencySymbol();
+            const won = userPayout > 0;
+
+            document.getElementById('modalRoundLabel').textContent = `EPOCH #${roundId}`;
+            document.getElementById('modalGreenTotal').textContent = `${poolsSnapshot[0].toFixed(4)} ${sym} ${winnerObj.idx === 0 ? '🏆' : loserObj.idx === 0 ? '❌' : ''}`;
+            document.getElementById('modalVioletTotal').textContent = `${poolsSnapshot[1].toFixed(4)} ${sym} ${winnerObj.idx === 1 ? '🏆' : loserObj.idx === 1 ? '❌' : ''}`;
+            document.getElementById('modalRedTotal').textContent = `${poolsSnapshot[2].toFixed(4)} ${sym} ${winnerObj.idx === 2 ? '🏆' : loserObj.idx === 2 ? '❌' : ''}`;
+            document.getElementById('modalCreatorFeeText').textContent = `+${creatorFee.toFixed(4)} ${sym}`;
+
+            const glowBg = document.getElementById('modalGlowBg');
+            const iconBadge = document.getElementById('modalIconBadge');
+            const titleEl = document.getElementById('modalTitle');
+            const subtitleEl = document.getElementById('modalSubtitle');
+            const payoutEl = document.getElementById('modalPayoutText');
+
+            if (won) {
+                glowBg.className = 'absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full blur-3xl opacity-45 pointer-events-none bg-emerald-500';
+                iconBadge.className = 'w-16 h-16 mx-auto rounded-2xl flex items-center justify-center text-3xl mb-3 shadow-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+                iconBadge.innerHTML = '<i class="fa-solid fa-trophy"></i>';
+                titleEl.textContent = 'POOL WON!';
+                titleEl.className = 'text-2xl font-extrabold text-emerald-400 mt-0.5';
+                subtitleEl.textContent = `${winnerObj.name} had the lowest pool! Tap Claim Winnings to withdraw.`;
+                payoutEl.textContent = `+${userPayout.toFixed(4)} ${sym}`;
+                payoutEl.className = 'text-emerald-400 text-sm font-extrabold';
+            } else {
+                glowBg.className = 'absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full blur-3xl opacity-45 pointer-events-none bg-rose-500';
+                iconBadge.className = 'w-16 h-16 mx-auto rounded-2xl flex items-center justify-center text-3xl mb-3 shadow-xl bg-rose-500/20 text-rose-400 border border-rose-500/40';
+                iconBadge.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+                titleEl.textContent = 'POOL FAILED';
+                titleEl.className = 'text-2xl font-extrabold text-rose-400 mt-0.5';
+                subtitleEl.textContent = `Lowest pool won (${winnerObj.name}). Highest pool failed (${loserObj.name}).`;
+                payoutEl.textContent = `-${totalUserStake.toFixed(4)} ${sym}`;
+                payoutEl.className = 'text-rose-400 text-sm font-extrabold';
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        // --- App Initialization ---
+        function initApp() {
+            setupTrustDeepLink();
+
+            // Populate initial Creator Drawer inputs
+            document.getElementById('creatorWalletInput').value = state.creatorWallet;
+            document.getElementById('deployedContractInput').value = state.contractAddress;
+
+            // Seed recent results strip
+            [1, 0, 2, 1, 2, 0].forEach((w, idx) => {
+                state.recentResults.push({ roundId: 1000 - idx, winnerIdx: w });
+            });
+
+            seedRoundLiquidity();
+            updateAllUI();
+
+            // Stake Preset Buttons ($5, $10, $25, $50)
+            document.querySelectorAll('.stake-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    state.selectedUsd = parseFloat(btn.getAttribute('data-usd'));
+                    state.selectedBnb = parseFloat(btn.getAttribute('data-bnb'));
+
+                    document.querySelectorAll('.stake-btn').forEach(b => {
+                        b.className = 'stake-btn py-2 rounded-xl font-mono text-xs font-bold bg-obsidian-800 text-slate-300 border border-white/10 hover:bg-obsidian-700 transition flex flex-col items-center';
+                    });
+                    btn.className = 'stake-btn py-2 rounded-xl font-mono text-xs font-extrabold bg-blue-600 text-white border border-blue-400 shadow-md transition flex flex-col items-center';
+                    updateWalletAndHeaderUI();
+                });
+            });
+
+            // Connect / Disconnect Trust Wallet
+            document.getElementById('connectWalletBtn').addEventListener('click', connectTrustWallet);
+            document.getElementById('topUpOrDisconnectBtn').addEventListener('click', () => {
+                if (state.isConnected) {
+                    disconnectWallet();
+                } else {
+                    state.nativeBalance = Number((state.nativeBalance + 0.25).toFixed(4));
+                    updateWalletAndHeaderUI();
+                    showToast(`Added +0.25 ${getCurrencySymbol()} sandbox funds!`, 'success');
+                }
+            });
+
+            // Claim Winnings Button
+            document.getElementById('claimWinningsBtn').addEventListener('click', claimWinnings);
+
+            // Manual On-Chain Settle Button
+            document.getElementById('manualSettleBtn').addEventListener('click', triggerOnChainSettle);
+
+            // Fast-Forward -15s Helper
+            document.getElementById('fastForwardBtn').addEventListener('click', () => {
+                if (isLiveContractActive()) {
+                    showToast('Fast-forward is disabled when synced to live blockchain.', 'warning');
+                    return;
+                }
+                if (state.timeLeft > 15) {
+                    for (let i = 0; i < 6; i++) simulateCrowdBets();
+                    state.timeLeft -= 15;
+                } else if (state.timeLeft > 2) {
+                    state.timeLeft = 2;
+                }
+                updateTimerUI();
+            });
+
+            // Creator & Smart Contract Drawer Controls
+            const openDrawer = () => document.getElementById('creatorDrawerModal').classList.remove('hidden');
+            document.getElementById('openCreatorDrawerBtn').addEventListener('click', openDrawer);
+            document.getElementById('quickOpenCreatorStats').addEventListener('click', openDrawer);
+            document.getElementById('closeCreatorDrawerBtn').addEventListener('click', () => {
+                document.getElementById('creatorDrawerModal').classList.add('hidden');
+            });
+
+            document.getElementById('saveCreatorConfigBtn').addEventListener('click', async () => {
+                const cWallet = document.getElementById('creatorWalletInput').value.trim();
+                const cAddr = document.getElementById('deployedContractInput').value.trim();
+
+                if (cWallet && !/^0x[a-fA-F0-9]{40}$/.test(cWallet)) {
+                    showToast('Enter a valid 0x Creator Wallet address.', 'error');
+                    return;
+                }
+                if (cAddr && !/^0x[a-fA-F0-9]{40}$/.test(cAddr)) {
+                    showToast('Enter a valid 0x Contract address or leave blank.', 'error');
+                    return;
+                }
+
+                if (cWallet) {
+                    state.creatorWallet = cWallet;
+                    localStorage.setItem('cp_creator_wallet', cWallet);
+                }
+
+                state.contractAddress = cAddr;
+                localStorage.setItem('cp_contract_address', cAddr);
+
+                if (isLiveContractActive()) {
+                    await refreshLiveWalletAndContract();
+                    showToast('Live Smart Contract linked! Ready for Trust Wallet transactions.', 'success');
+                } else {
+                    updateAllUI();
+                    showToast('Configuration saved (Simulator Mode active).', 'success');
+                }
+                document.getElementById('creatorDrawerModal').classList.add('hidden');
+            });
+
+            document.getElementById('clearContractBtn').addEventListener('click', () => {
+                state.contractAddress = '';
+                localStorage.removeItem('cp_contract_address');
+                document.getElementById('deployedContractInput').value = '';
+                seedRoundLiquidity();
+                updateAllUI();
+                showToast('Switched to Built-in 5% Creator Simulator Mode.', 'info');
+            });
+
+            document.getElementById('copySolidityBtn').addEventListener('click', () => {
+                const box = document.getElementById('solidityCodeBox');
+                box.select();
+                document.execCommand('copy');
+                showToast('ColorPrediction5Percent.sol copied to clipboard!', 'success');
+            });
+
+            document.getElementById('closeModalBtn').addEventListener('click', () => {
+                document.getElementById('resultModal').classList.add('hidden');
+            });
+
+            // Main 1-Second Round Loop
+            setInterval(() => {
+                if (isLiveContractActive()) {
+                    if (state.timeLeft > 0) {
+                        state.timeLeft -= 1;
+                    }
+                    updateTimerUI();
+                    if (state.timeLeft % 10 === 0) {
+                        refreshLiveWalletAndContract();
+                    }
+                } else {
+                    if (state.timeLeft > 0) {
+                        state.timeLeft -= 1;
+                        simulateCrowdBets();
+                        updateTimerUI();
+                    } else {
+                        settleSimulatorRound();
+                    }
+                }
+            }, 1000);
+        }
+
+        window.onload = initApp;
+    </script>
+</body>
+</html>
